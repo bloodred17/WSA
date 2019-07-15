@@ -1,4 +1,4 @@
-# WSAfiles
+# WSA
 Webstacks Academy files :
 <ul>
 <li>Javascript Assignments are in the folder 'Assignments' <br>
