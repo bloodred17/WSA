@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form name="form1" action="" onsubmit="validate(this)">
+        <input type="text" name="tx1" naxLength="30" placeholder="Name:"><br>
+        <input type="email" name="tx2" placeholder="E-mail"><br>
+        <input type="number" name="tx3" size="10" placeholder="Number"><br>
+        <input type="password" name="tx4" placeholder="Password"><br>
+        <input type="text" name="tx5" placeholder="Disabled" disabled><br>
+        <textarea name="tx6" id="" cols="30" rows="10"></textarea><br>
+        
+        <input type="radio" name="gender" id="male">Male<br>
+        <input type="radio" name="gender" id="female">Female<br>
+        <!-- <button onclick="validate(this)">Button</button> -->
+        <select id="fruits">
+            <option value="apple">Apple</option>
+            <option value="mango">Mango</option>
+            <option value="banana">Banana</option>
+        </select><br>
+        <input type="submit" ><br>
+        <input type="reset"><br>
+    </form>
+    <script>
+        function validate(form){
+            // alert("Hello world");
+            alert(form1.fruits.value);
+            if(form1.male.checked == false){
+                alert("False");
+            }else{
+                alert("True");
+            }
+        }
+    </script>
+</body>
+</html>

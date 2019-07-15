@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="id1" min="100" max="300">
+    <button onclick="rangeFunction()">OK</button>
+    <p id="demo1"></p>
+    <input type="number" id="id2" min="100" max="300">
+    <button onclick="rangeOverflowFunction()">OK</button>
+    <p id="demo2"></p>
+    <input type="number" id="id3" min="100" max="300">
+    <button onclick="rangeOverUnder()">OK</button>
+    <p id="demo3"></p>
+
+    <script>
+        function rangeFunction(){
+            var myInput = document.getElementById("id1");
+            if(!myInput.checkValidity()){
+                msg = myInput.validationMessage;
+            }else{
+                msg = "Input OK!";
+            }
+            document.getElementById("demo1").innerHTML = msg;
+        }
+        function rangeOverflowFunction(){
+            var myInput = document.getElementById("id2");
+            if(myInput.validity.rangeOverflow){
+                msg = "Value too large";
+            }else{
+                msg = "Input OK!";
+            }
+            document.getElementById("demo2").innerHTML = msg;
+        }
+        function rangeOverUnder(){
+            var myInput = document.getElementById("id3");
+            if(myInput.validity.rangeOverflow){
+                msg = "Value too large";
+            }else if(myInput.validity.rangeUnderflow){
+                msg = "Value too small";
+            }else{
+                msg = "Input OK!";
+            }
+            document.getElementById("demo3").innerHTML = msg;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Android</title>
+</head>
+<body>
+    <canvas id="canvas1" style="border: 1px solid black"></canvas>
+    <script>
+        var c = document.getElementById("canvas1");
+        c.width = innerWidth;
+        c.height = innerHeight;
+        var ctx = c.getContext('2d');
+        ctx.beginPath();
+        x_ref = parseInt(innerWidth/2);
+        y_ref = parseInt(innerHeight/2);
+        //face
+        const x_face = x_ref;
+        const y_face = y_ref - 200;
+        const radius_face = 50;
+        ctx.arc(x_face,y_face, radius_face, 0, 2*Math.PI);
+        
+        //ears
+        ctx.fillRect(x_face-radius_face-10,y_face-15,10,30);
+        ctx.fillRect(x_face+radius_face,y_face-15,10,30);
+        
+        //body
+        const body_width = 100;
+        const body_height = 200;
+        const y_body_ref = y_face + radius_face;
+        const x_body_ref = x_face - parseInt(body_width/2);
+        ctx.fillRect(x_body_ref, y_body_ref, body_width, body_height);
+
+        //left hand
+        const lHand_width = body_width - 10;
+        const lHand_height = parseInt(body_height/7);
+        const x_left_hand_ref = x_body_ref - lHand_width;
+        const y_left_hand_ref = y_body_ref;
+        ctx.fillRect(x_left_hand_ref, y_left_hand_ref, lHand_width, lHand_height);
+
+        //left wrist
+        const left_wrist_width = parseInt(body_height/10);
+        const left_wrist_height = parseInt(body_height/2);
+        const x_left_wrist = x_left_hand_ref + left_wrist_width;
+        const y_left_wrist = y_body_ref;
+        ctx.fillRect(x_left_hand_ref, y_left_hand_ref, left_wrist_width, left_wrist_height);
+
+        //right hand
+        const x_right_hand_ref = x_body_ref + body_width;
+        const y_right_hand_ref = y_body_ref;
+        const rHand_width = lHand_width;
+        const rHand_height = lHand_height;
+        ctx.fillRect(x_right_hand_ref, y_right_hand_ref, rHand_width, rHand_height);
+
+        //right wrist
+        // const right_wrist_width = left_wrist_width;
+        // const right_wrist_height = left_wrist_height;
+        const right_wrist_width = parseInt(body_height/10);
+        const right_wrist_height =        parseInt(body_height/2);
+        const x_right_wrist = x_body_ref + body_width + rHand_width;
+        const y_right_wrist = right_wrist_height + lHand_height;
+        ctx.fillRect(x_right_wrist, y_right_wrist, right_wrist_width, right_wrist_height);
+
+        //left leg
+        const left_leg_width = parseInt(body_width/3);
+        const left_leg_height = body_height;
+        const x_left_leg_ref = x_body_ref;
+        const y_left_leg_ref = y_body_ref+body_height;
+        ctx.fillRect(x_left_leg_ref, y_left_leg_ref, left_leg_width, left_leg_height);
+
+        //left foot
+        const left_foot_width = parseInt(left_leg_height/4);
+        const left_foot_height = parseInt(left_leg_width/2);
+        const y_left_foot = y_left_leg_ref + left_leg_height;
+        const x_left_foot = x_left_leg_ref;
+        ctx.fillRect(x_left_foot, y_left_foot, left_foot_width, left_foot_height);
+
+        //right leg
+        const right_leg_width = left_leg_width;
+        const right_leg_height = left_leg_height;
+        const x_right_leg_ref = x_body_ref + body_width - right_leg_width;
+        const y_right_leg_ref = y_body_ref + body_height;
+        ctx.fillRect(x_right_leg_ref, y_right_leg_ref, right_leg_width, right_leg_height);
+
+        //right foot
+        const right_foot_width = left_foot_width;
+        const right_foot_height = left_foot_height;
+        const y_right_foot = y_right_leg_ref + right_leg_height;
+        const x_right_foot = x_right_leg_ref;
+        ctx.fillRect(x_right_foot, y_right_foot, right_foot_width, right_foot_height);
+
+        ctx.strokeStyle = 'blue';
+        // ctx.fillStyle = "blue";
+        ctx.stroke();
+        // console.log(count);
+            
+
+    </script>
+</body>
+</html>

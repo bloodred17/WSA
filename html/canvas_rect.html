@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Canvas-rectangle</title>
+</head>
+<body>
+    <canvas id="canvas1" width="300" height="200" style="border: 1px solid #d3d3d3"></canvas>
+    <script>
+        var a = document.getElementById('canvas1');
+        a.width = screen.availWidth;
+        a.height = screen.availHeight;
+        var ctx = a.getContext('2d');
+
+        ctx.fillRect(100,100,100,100);
+        ctx.fillStyle = "red";
+        ctx.fillRect(400,100,100,100);
+        ctx.fillStyle = "green";
+        ctx.fillRect(300,300,100,100);
+        ctx.fillStyle = "red";
+    </script>
+</body>
+</html>

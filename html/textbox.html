@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            color: blueviolet;
+            background-color: azure;
+        }
+        legend{
+            font-family: Tahoma;
+            border: 3px solid blueviolet;
+            font-size: 30px;
+        }
+        label{
+            font-family: monospace;
+            font-size: 22px;
+        }
+        fieldset{
+            border: 3px solid blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>User Info</legend>
+
+            <label for="username">User Name:</label>
+            <input type="text" id="username"><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password"><br><br>
+            <label for="comment">Comment:</label><br>
+            <textarea id="comment" cols="30" rows="10" placeholder="Write you comment here"></textarea>
+        </fieldset><br>
+        <input type="submit">
+    </form>
+</body>
+</html>

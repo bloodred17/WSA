@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Number</th>
+        </tr>
+        <tr>
+            <td>Ankur</td>
+            <td>7077100772</td>
+        </tr>
+        <tr>
+            <td>Suman</td>
+            <td>7077100371</td>
+        </tr>
+        <tr>
+            <td>Ananya</td>
+            <td>7077100636</td>
+        </tr>
+        <tr>
+            <td>Anubhav</td>
+            <td>7077102533</td>
+        </tr>
+    </table>
+
+    <script>
+        $(document).ready(() => {
+            $('tr:even').css("backgroundColor", "lightskyblue");
+            $('tr:even').css("color", "gray");
+            $('tr:first').css("backgroundColor", "skyblue");
+            $('tr:first').css("color", "white");
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>No Conflict</title>
+
+    <script src="../jquery-3.3.1.min.js"></script>
+    <script>
+        jQuery(document).ready(function(s){
+            s('button').click(function(){
+                s("p").text("jQuerry is still working!");
+            });
+        });
+        // var jq = jQuerry.noConflict();
+    </script>
+
+</head>
+<body>
+    <p>Some text</p>
+    <button>Click me</button>
+</body>
+</html>

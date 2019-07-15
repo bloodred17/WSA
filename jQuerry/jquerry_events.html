@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#dbclicktest").dblclick(function(){
+                console.log("Double clicked");
+            })
+
+            $("#hovertest").hover(function(){
+                console.log("Inside the hover paragraph");
+            },function(){
+                console.log("Outside the hover paragraph");
+            });
+
+            $("#multipletest").on({
+                mouseenter: function(){
+                    $(this).css("background-color", "lightgrey");
+                },
+                mouseleave: function(){
+                    $(this).css("background-color", "lightblue");
+                },
+                click: function(){
+                    $(this).css("background-color", "yellow");
+                }
+            })
+        })
+    </script>
+
+</head>
+<body>
+    <p id="dbclicktest">Double click here</p>
+    <p id="hovertest">Hover over here</p>
+    <p id="multipletest">Multiple test</p>
+</body>
+</html>

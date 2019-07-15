@@ -1,0 +1,2 @@
+let gameData = getGameData();
+gameMaker();

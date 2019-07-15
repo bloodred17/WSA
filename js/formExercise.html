@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pizza Order</title>
+    <style>
+        h1{
+            color: rgb(167, 1, 1)
+        }
+        h2, h3{
+            color: darkred;
+        }
+    </style>
+</head>
+<body style="background-color:lightsalmon">
+    <h1 style="text-align: center">Order Fresh Pizza</h1>
+    <div style="margin: auto 400px">
+
+        <form name="pizza_order" action="" onsubmit="validate(this)">
+            <h2>Select Pizza: </h2>
+            <input type="radio" name="pizza_type" value="Simply Veg" id="simply_veg" required>Simply Veg<br>
+            <input type="radio" name="pizza_type" value="Veg Supreme" id="veg_supreme" required>Veg Supreme<br>
+            <input type="radio" name="pizza_type" value="Veg Delight" id="veg_delight" required>Veg Delight<br>
+    
+            <h2>Select Size:</h2>
+            <input type="radio" name="pizza_size" value="Personal Pan" id="personal_pan" required>Personal Pan<br>
+            <input type="radio" name="pizza_size" value="Medium" id="medium" required>Medium<br>
+            <input type="radio" name="pizza_size" value="Large" id="large" required>Large<br>
+    
+            <h2>Select Crust</h2>
+            <input type="radio" name="pizza_crust" value="Thin" id="thin">Thin<br>
+            <input type="radio" name="pizza_crust" value="Normal" id="normal">Normal<br>
+            <input type="radio" name="pizza_crust" value="Special" id="special">Special<br>
+    
+            <h2>Payment Method:</h2>
+            <select name="payment">
+                <option value="cod">COD</option>
+                <option value="credit_card">Credit Card</option>
+                <option value="paytm">PayTm</option>
+                <option value="debit_card">Debit Card</option>
+            </select>
+    
+            <h3>Do you agree with our Terms and Conditions?</h3>
+            <input type="checkbox" name="tandc" id="t&c" required>Check the box to agree<br>
+    
+            <h3>Do you have a discount code?</h3>
+            <input type="text" name="discount_code" placeholder="Enter Code">
+    
+            <h3>Customer Details:</h3>
+            Name:
+            <input type="text" name="name" maxlength="10" required><br>
+            E_mail:
+            <input type="email" name="email" required><br>
+            Phone Number: 
+            <input type="number" name="phone" required><br>
+            <br>
+            <input type="submit">
+        </form>
+    </div>
+
+    <script>
+        function validate(form){
+            const pizza_type = pizza_order.pizza_type.value;
+            const pizza_size = pizza_order.pizza_size.value;
+            const pizza_crust = pizza_order.pizza_crust.value;
+            const payment = pizza_order.payment.value;
+
+            const discount = pizza_order.discount_code.value;
+            const name = pizza_order.name.value;
+            const email = pizza_order.email.value;
+            const phone = pizza_order.phone.value;
+
+            document.write("<h2>Bill</h2>");
+            document.write("Pizza Type: ");
+            document.write(pizza_type);
+            document.write("<br>Pizza Size: ");
+            document.write(pizza_size);
+            document.write("<br>Pizza Crust: ");
+            document.write(pizza_crust);
+            document.write("<br>Payment Option: ");
+            document.write(payment);
+            document.write("<br>Discount Code:");
+
+            let text = /PIZDIS[0-9][0-9][0-9]/.test(discount)? /090$/.test(discount)? "Code is valid." : "Valid Format, Invalid code." : "Code is invalid.";
+            document.write(text);
+            document.write("<br>Name: ");
+            document.write(name);
+            text = /[0-9]/.exec(name)? " Invalid Name" : " Valid Name";
+            document.write("<br>");
+            document.write(text);
+            document.write("<br>E-mail: ");
+            document.write(email);
+            document.write("<br>Phone: ");
+            document.write(phone);
+            document.write("<br>");
+            text = /^[6-9][0-9]{9,9}/.test(phone)? " Phone Number is valid" : " Invalid phone number";
+            document.write(text);
+
+        }
+    </script>
+</body>
+</html>

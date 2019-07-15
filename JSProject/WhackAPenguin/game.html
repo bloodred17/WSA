@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Whack'a'Penguin</title>
+    <style>
+        #main_game{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 20px 20px;
+        }
+        .box{
+            text-align: center;
+            border: 1px solid black;
+            /* height: 200px; */
+            background-color: black;
+        }
+        .box img{
+            object-fit: cover;
+        }
+        .value{
+            /* display: none; */
+            color: red;
+            /* float:left; */
+            display: none;
+            display: inline-block;
+        }
+        .score{
+            display: inline-block;
+        }
+        .btn{
+            border: 1px solid black;
+            display: inline-block;
+            padding: 0 30px;
+        }
+        .game_runtime{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="game_menu">Whack'a'Penguin</h1>
+        <h3 class="score game_runtime">Score:</h3>
+        <h3 class="score score_value game_runtime"></h3>
+    </header>
+    <section id="begin_game" class="game_menu">
+        <div class="btn btn-anim start_game"><p class="btn_txt">Start Game</p></div>
+    </section>
+    <section id="main_game" style="display: none">
+        <div class="box" id="cloud1">
+            <img class="image" src="./resources/images/mound_hover.png" alt="yenguin">
+            <p class="value"></p>
+        </div>
+        <div class="box" id="cloud2">
+            <img class="image" src="./resources/images/mound_hover.png" alt="yenguin">
+            <p class="value"></p>
+        </div>
+        <div class="box" id="cloud3">
+            <img class="image" src="./resources/images/mound_hover.png" alt="yenguin">
+            <p class="value"></p>
+        </div>
+        <div class="box" id="cloud4">
+            <img class="image" src="./resources/images/mound_hover.png" alt="yenguin">
+            <p class="value"></p>
+        </div>
+        <div class="box" id="cloud5">
+            <img class="image" src="./resources/images/mound_hover.png" alt="yenguin">
+            <p class="value"></p>
+        </div>
+        <div class="box" id="cloud6">
+            <img class="image" src="./resources/images/mound_hover.png" alt="yenguin">
+            <p class="value"></p>
+        </div>
+        <div class="box" id="cloud7">
+            <img class="image" src="./resources/images/mound_hover.png" alt="yenguin">
+            <p class="value"></p>
+        </div>
+        <div class="box" id="cloud8">
+            <img class="image" src="./resources/images/mound_hover.png" alt="yenguin">
+            <p class="value"></p>
+        </div>
+        <div class="box" id="cloud9">
+            <img class="image" src="./resources/images/mound_hover.png" alt="yenguin">
+            <p class="value"></p>
+        </div>
+    </section>
+    <section class="game_over" style="display: none;">
+        <div class="score_board">
+            <h2 class="score">Score:</h2>
+            <h2 class="score score_value"></h2>
+        </div>
+        <div class="controls">
+            <div class="btn btn-anim restart_game"><p class="btn_txt">Restart Game</p></div>
+        </div>
+    </section>
+    <script src="js/GameData.js"></script>
+    <script src="js/game_functions.js"></script>
+    <script src="js/game_controls.js"></script>
+    <script src="js/game.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Layout</title>
+    <style>
+        body{
+            font-family: helvetica;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color:rgb(230, 204, 255);
+        }
+        header{
+            border: 3px solid rebeccapurple;
+            height: 10vh;
+            padding-bottom: 35px;
+            margin: 20px;
+            background-color: blueviolet;
+            color: white;
+        }
+        header nav a{
+            color: white;
+            display: inline-block;
+            margin: auto 10px;
+            text-decoration: none;
+            border-right: 3px solid snow;
+            padding: 5px;
+        }
+        section{
+            height: 65vh;
+        }
+        aside{
+            width: 10%;
+            /* border: 1px solid red; */
+            /* margin: 5px; */
+            float: left;
+            text-align: center;
+        }
+        #aside-left{
+            border: 4px solid #BE20E8;
+            margin-left: 1%;
+        }
+        #aside-right{
+            float: right;
+            margin-right: 4%;
+            margin-top: 3%;
+        }
+        #aside-right img{
+            margin-bottom: 30px;
+        }
+        article{
+            float: left;
+            width: 70%;
+            /* border: 1px solid blue; */
+            padding: 5% 2%;
+        }
+        footer{
+            height: 8vh;
+            padding: 10px;
+            /* width: 100vw; */
+            background-color: #4E1880;
+            margin: 20px;
+            color: white;
+            border: 2px solid #C07DFF;
+        }
+        .aside-link{
+            margin: 10px;
+            text-decoration: none;
+            color: #FF24E6;
+            display: block;
+        }
+        img{
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Web Development</h1>
+        <nav>
+            <a href="">HTML</a>
+            <a href="">CSS</a>
+            <a href="#">Javascript</a>
+            <a href="">JQuerry</a>
+            <a href="">Angular</a>
+            <a href="">NodeJS</a>
+        </nav>
+    </header>
+    <section>
+        <aside id="aside-left">
+            <nav>
+                <a class="aside-link" href="">HTML</a>
+                <a class="aside-link" href="">CSS</a>
+                <a class="aside-link" href="#">Javascript</a>
+                <a class="aside-link" href="">JQuerry</a>
+                <a class="aside-link" href="">Angular</a>
+                <a class="aside-link" href="">NodeJS</a>
+            </nav>
+        </aside>
+        <article>
+            New year, new time to think about web design trends.
+
+            The start of the year is a great time to look back on the previous year and your successes and look ahead to things that you want to improve and change.
+
+            And that goes for website design trends and techniques as well. Many elements that gained popularity in the later part of 2018 will continue to emerge as trends in 2019. These trending elements include everything to color choices, typography and text usage, voice and VR interfaces and everything UX.
+
+            There are so many great things happening in web design right now that it was tough to break it down, but we hope you’ll enjoy our look at the top 17 web design and UI trends for 2019.7
+        </article>
+        <aside id="aside-right">
+            <img src="./Assignment13/html5.png" alt="html5">
+            <img src="./Assignment13/css3.png" alt="css3">
+            <img src="./Assignment13/javascript.png" alt="javascript">
+        </aside>
+    </section>
+    <footer>
+        <p>&copy webdev</p>
+    </footer>
+</body>
+</html>

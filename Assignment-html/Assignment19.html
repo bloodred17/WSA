@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>E-mail Registration Form</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            background: rgba(245, 27, 78, 0.925);
+        }
+        header{
+            text-align: center;
+            border: 3px solid black;
+            font-family: Helvetica;
+            font-weight: 100;
+            font-size: 20px;
+            font-style:italic;
+            color:crimson;
+            background-color: black;
+        }
+        h1{
+            border: 3px solid crimson;
+            border-radius: 100px;
+            padding: 10px;
+            margin: 1% 30%;
+        }
+        .form{
+            border-radius: 20px;
+            border: 3px solid crimson;
+            margin: 1% 25%;
+            padding: 1% 5%;
+            color: white;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: rgb(221, 20, 60);
+        }
+        .form:hover,
+        .form:active{
+            box-shadow: 0px 1px 10px;
+        }
+        tr {
+            margin: 20px;
+        }
+        td{
+            /* margin: 0 10px; */
+            padding: 2% 50px;
+        }
+        input{
+            border-radius: 10px;
+            padding: 7px;
+        }
+        textarea{
+            padding: 7px;
+            border-radius: 10px;   
+        }
+        .submit{
+            text-align: center;
+            margin-top: 3%;
+        }
+        #submit_btn{
+            background-color: rgba(0, 0, 0, 0);
+            color: white;
+            border: 3px solid whitesmoke;
+            border-radius: 100px;
+            padding: 2%;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>E-mail Registration</h1>
+    </header>
+    <div class="form">
+        <form action="" id="registration">
+            <table>
+                <tr>
+                    <td>
+                        <label for="name">Name:</label>
+                    </td>
+                    <td>
+                        <input required type="text" id="name" name="name"><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="address">Permanent Address:</label><br>
+                    </td>
+                    <td>
+                        <textarea required name="address" id="address" cols="30" rows="10"></textarea><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="maddress">Mailing Address:</label><br>
+                    </td>
+                    <td>
+                        <textarea required name="maddress" id="maddress" cols="30" rows="10"></textarea><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="phnum">Phone Number:</label>
+                    </td>
+                    <td>
+                        <input required type="text" id="phnum" name="phnum"><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="dob">Date of Birth:</label>
+                    </td>
+                    <td>
+                        <input required type="date" id="dob" name="dob"><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">E-mail:</label>
+                    </td>
+                    <td>
+                        <input required type="email" id="email" name="email"><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="username">Username:</label>
+                    </td>
+                    <td>
+                        <input required type="text" id="username" name="username"><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="password">Password</label>
+                    </td>
+                    <td>
+                        <input type="password" id="password" name="password"><br>
+                    </td>
+                </tr>
+            </table>
+            <div class="submit">
+                <!-- <input id="submit_btn" type="submit"> -->
+                <button type="submit" id="submit_btn">Register</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <h1>Dealing with Paragraphs.....</h1>
+    <p>First Paragraph</p>
+    <p>Second Paragraph</p>
+    <p>Third Paragraph</p>
+    <p>Fourth Paragraph</p>
+
+    <h2>Dealing with lists......</h2>
+    <ul>
+        <li>FullStack Course</li>
+        <li>FrontEnd Course</li>
+        <li>Backend Course</li>
+    </ul>
+
+    <button>Click to hide</button>
+
+    <h2>Dealing with tables.......</h2>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Number</th>
+        </tr>
+        <tr>
+            <td>Ankur</td>
+            <td>7077100772</td>
+        </tr>
+        <tr>
+            <td>Suman</td>
+            <td>7077100371</td>
+        </tr>
+        <tr>
+            <td>Ananya</td>
+            <td>7077100636</td>
+        </tr>
+        <tr>
+            <td>Anubhav</td>
+            <td>7077102533</td>
+        </tr>
+    </table>
+    <script>
+        $(document).ready(() => {
+            $('p:gt(1)').text("Modified text");
+        })
+
+        $("button").click(() => {
+            $("ul li:first").hide();
+        })
+        
+        $("tr").css("color", "white");
+        $("tr:odd").css("backgroundColor", "grey")
+        $("tr:even").css("backgroundColor", "purple")
+    </script>
+</body>
+</html>

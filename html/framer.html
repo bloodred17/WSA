@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Framer</title>
+    <style>
+        body{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            font-size: 35px;
+            padding: 20px;
+            height: 10vh;
+            width: 100%;
+            background-color: black;
+            color: white;
+        }
+        nav{
+            text-align: center;
+            background-color: grey;
+            height: 10vh;
+            padding-top: 30px;
+
+        }
+        nav p{
+            display: inline;
+            margin: 100px;
+            border:2px solid oldlace;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        nav p a{
+            color: white;
+            font-size: 32px;
+            text-decoration: none;
+        }
+        section{
+            height: 50vh;
+            /* border: 1px solid seagreen; */
+        }
+        img{
+            float: left;
+            width: 30%;
+        }
+        article{
+            padding: 60px;
+            text-align: justify;
+            float: left;
+            max-width: 30%;
+        }
+        iframe{
+            border: 4px dotted red;
+            width: 100%;
+            height: 50vh;
+        }
+        .iframe {
+            float: right;
+            width: 30%;
+            overflow: scroll;
+        }
+        .links{
+            height: 20vh;
+            background-color:lightgray;
+        }
+        .links p a{
+            border-bottom: 3px solid aqua;
+            color: black;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="display: inline">Hello World!</h1>
+    </header>
+    <nav>
+        <p><a href="http://www.google.com">Google</a></p>
+        <p><a href="http://www.discord.com">Discord</a></p>
+        <p><a href="http://www.slack.com">Slack</a></p>
+    </nav>
+    <section>
+        <img src="./resources/images/potato.png" alt="potato">
+        <article>
+            The potato is a starchy, tuberous crop from the perennial nightshade Solanum tuberosum, native to the Americas. In many contexts, potato refers to the edible tuber, but it can also refer to the plant itself.[2] Common or slang terms include tater,[a] tattie, and spud.
+
+            Wild potato species can be found throughout the Americas, from the United States to southern Chile.[4] The potato was originally believed to have been domesticated independently in multiple locations,[5] but later genetic testing of the wide variety of cultivars and wild species traced a single origin for potatoes. In the area of present-day southern Peru and extreme northwestern Bolivia, from a species in the Solanum brevicaule complex, potatoes were domesticated approximately 7,000–10,000 years ago.[6][7][8] In the Andes region of South America, where the species is indigenous, some close relatives of the potato are cultivated.
+
+            Potatoes were introduced to Europe from the Americas in the second half of the 16th century by the Spanish. Today they are a staple food in many parts of the world and an integral part of much of the world's food supply. As of 2014, potatoes were the world's fourth-largest food crop after maize (corn), wheat, and rice.[9] 
+
+        </article>
+        <div class="iframe">
+            <iframe src="./ifram1.html" frameborder="0"></iframe>
+        </div>
+    </section>
+    <section class="links">
+        <p>Links:</p>
+        <ol>
+            <li>
+                <p><a href="http://www.css-tricks.com" target="display">CSS-Tricks</a></p>
+            </li>
+            <li>
+                <p><a href="http://www.design-code.com"target="display">Design Code</a></p>
+            </li>
+        </ol>
+    </section>
+</body>
+</html>

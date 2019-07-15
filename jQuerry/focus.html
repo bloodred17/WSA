@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Focus</title>
+    <script src="../jquery-3.3.1.min.js"> </script>
+    <script>
+        $(document).ready(function(){
+            $("#first").focus(function(){
+                $("span").css("display", "inline");
+            });
+
+            $("#first").blur(function(){
+                alert("This input field lost it's focus.");
+            });
+
+            $("form").submit(function(){
+                alert("Submitted");
+            });
+
+            $("#select").change(function(){
+                console.log(this.value);
+            })
+        });
+    </script>
+</head>
+<body>
+    <form action=""></form>
+    <input type="text" id="first">
+    <span style="display: none">Nice to meet you!</span>
+    <select name="" id="select">
+        <option value="java">Java</option>
+        <option value="javascript">Javascript</option>
+        <option value="python">Python</option>
+        <option value="lua">LUA</option>
+    </select>
+    <input type="submit" name="" id="">
+</body>
+</html>

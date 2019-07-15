@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ready function</title>
+
+    <script src="../jquery-3.3.1.min.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function(){
+            // document.write("welcome to jQuery...");
+            // document.write('<br>DOM is created and calling jQuery ready function');
+
+            $("#btn1").click(function(){
+                $("#hide1").hide();
+            })
+
+            $("#btn2").click(function(){
+                $("#hide2").hide();
+            })
+        
+        });
+    </script>
+</head>
+<body>
+    <p id="hide1">This is a paragraph. It will be hidden by default</p>
+    <p id="hide2">This is a paragraph. It will hide on button click</p>
+    <button id="btn1">Click and hide</button>
+    <button id="btn2">Click and hide</button>
+</body>
+</html>
