@@ -1,12 +1,28 @@
+//******************************************************************
+// + Discription: Program to change paragraph style using dom
+// + Author     : Ankur S Dutta
+// + Start Date : 5-July-2019
+// + End Date   : 16-July-2019
+// + Institution: WSA
+//******************************************************************
 
-// var pattern_date = /[0-3][0-9]+[\/|-|\.]+[0-1][0-9]+[\/|-|\.]+[0-9]{4,4}/;
-// var pattern_year = /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/;
-// var pattern_year2 =/^(0[1-9]|1[012])[-/.](0[1-9]|[1-2][0-9]|3[01])[-/.](19|20)\\d\\d$/;
-var reg = /^(((0[1-9]|[12]\d|3[01])\/(0[13578]|1[02])\/((19|[2-9]\d)\d{2}))|((0[1-9]|[12]\d|30)\/(0[13456789]|1[012])\/((19|[2-9]\d)\d{2}))|((0[1-9]|1\d|2[0-8])\/02\/((19|[2-9]\d)\d{2}))|(29\/02\/((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00))))$/g;
+//Pattern for date
+var pattern_year = /^(0?[1-9]|[12][0-9]|3[01])[/-](0?[1-9]|1[012])[/-]\d{4}$/;
+//Taking input from user
 var input = prompt("Enter a String: ");
-var dates = input.match(pattern_year);
-if(pattern_year.test(input)){
-    document.write("Dates: "+dates);
+//Searching for dates in the input string
+var dates = input.split(" ").filter((word) => {
+    if(pattern_year.test(word)){
+        return word;
+    }
+});
+if(dates.length>0){
+    //if dates are found then display dates
+    document.write("<br>>> Dates in the String are: ");
+    dates.forEach((elem) => {
+        document.write("<br>>> ------"+elem);
+    });
 }else{
-    document.write("Pattern not found");
+    //dates are not found: display message
+    document.write("<br>>> No valid dates found!");
 }

@@ -71,29 +71,22 @@ const dispenser = (data) => {
     //Get boxes
     const box = document.getElementsByClassName("box");
     const box_arr = [...box];
-    // console.log(box_arr);
     //supply seeds to boxes
     box_arr.forEach((cloud, idx) => {
-        // console.log(cloud.firstChild.nextSibling.nextSibling.nextSibling);
         cloud.firstChild.nextSibling.nextSibling.nextSibling.innerHTML = data[idx];
         //controls (adding click event listener to get clicked cloud)
         //when box is clicked, assigned penguin should be called and saved
         cloud.addEventListener('mouseup',(event) => {
-            // console.log(event.target.className === "box");
             const gameData = getGameData();
             let clickedValue = "";
             //find target
             if(event.target.className === "box"){
                 const selected_box = event.target;
-                // console.log(selected_box);
-                // console.log(selected_box.firstChild.nextSibling.nextSibling.nextSibling.innerHTML);
                 //get target's value (seed)
                 clickedValue = selected_box.firstChild.nextSibling.nextSibling.nextSibling.innerHTML;
             }
-            // console.log(event.target.className === "image");
             if(event.target.className === "image"){
                 const selected_box = event.target;
-                // console.log(selected_box.nextSibling.nextSibling.innerHTML);
                 //get target's value (seed)
                 clickedValue = selected_box.nextSibling.nextSibling.innerHTML;
             }
@@ -148,13 +141,19 @@ const gameOver = () => {
 };
 
 const scoreCalc = (gameData) => {
-    const score_value = document.querySelector(".score_value");
+    const show_score_elements = [...document.querySelectorAll(".score_value")];
     const probability = ((gameData.seed.length - gameData.points.length - 1)/gameData.seed.length)*100;
     // console.log("Probability: "+probability);
     gameData.probability.push(probability);
     let score = 100 - probability;
     gameData.score += parseInt(score);
-    score_value.innerHTML = gameData.score;
+    show_score_elements.forEach((elem) => {
+        elem.innerHTML = gameData.score;
+    });
     // console.log("Score: "+gameData.score);
     saveGameData(gameData);
+};
+
+const renderImages = () => {
+    
 };

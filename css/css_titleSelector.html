@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        [title]{
+            color: lightseagreen;
+        }
+        p[title]{
+            color: deeppink;
+        }
+        input[type="email"]{
+            border: 3px solid orangered;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <p>This is first paragraph</p>
+    <p title="Fill the below form">This is second paragraph</p>
+    <form action="">
+        <label for="">
+            Name:
+            <input type="text" placeholder="Enter your Name" title="Enter your name here">
+        </label>
+        <label for="">
+            E-mail:
+            <input type="email" placeholder="you@example.com">
+        </label>
+    </form>
+</body>
+</html>

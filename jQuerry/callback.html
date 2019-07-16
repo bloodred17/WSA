@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#withcallback").click(function(){
+                $("#withcallbacktext").toggle("fast", function(){
+                    alert("The paragraph is now hidden");
+                });
+            });
+            $("#wocallback").click(function(){
+                $("#wocallbacktext").hide("slow");
+                alert("The paragraph is now hidden");
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>jQuery effects - Callbacks</h2>    
+    <button id="withcallback">With callback effect</button>
+    <p id="withcallbacktext">jQuery testing with callback...</p>
+
+    <button id="wocallback">Without callback effect</button>
+    <p id="wocallbacktext">jQuery testing without callback...</p>
+</body>
+</html>

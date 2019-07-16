@@ -38,5 +38,6 @@ arr.forEach((element) => {
     sum += element;
     product *= element;
 });
+//displaying data
 document.write("<br>>> Sum: "+sum);
 document.write("<br>>> Product: "+product);

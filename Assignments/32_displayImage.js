@@ -15,14 +15,14 @@ const image1 = document.createElement('img');
 div_img.className = "image-container";
 body.appendChild(div_img);
 //adding attributes to the image
-image1.src = "Assignments/32_displayImage/image1.jpg";
+image1.src = "./32_displayImage/image1.jpg";
 image1.alt = "image1";
 image1.style.height = "300px";
 image1.style.height = "500px";
 div_img.appendChild(image1);
 //adding attributes to image2
 const image2 = document.createElement('img');
-image2.src = "Assignments/32_displayImage/image2.jpg";
+image2.src = "./32_displayImage/image2.jpg";
 image2.alt = "image2";
 image2.style.height = "300px";
 image2.style.height = "500px";

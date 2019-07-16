@@ -12,4 +12,4 @@ var pattern = /[a-zA-Z0-9]/;
 var input = prompt("Enter a string: ");
 
 //Displaying if input string contains letters and numbers or not
-document.write("<br>>> Contains Alpha numeric: "+pattern.test(input));
+document.write("<br>>> Contains Alpha numeric: " + pattern.test(input));

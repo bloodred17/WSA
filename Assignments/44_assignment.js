@@ -4,10 +4,7 @@ const btn_google = document.createElement('button');
 let newWindow;
 btn_google.innerHTML = "Open Google";
 btn_google.onclick = () => {
-    newWindow = window.open("", "new", "height=250px, width=250px");
-    // location.assign("http://www.google.com");
-    // console.log(screen.availHeight);
-    // console.log(screen.availWidth=;
+    newWindow = window.open("http://www.google.com", "new", "height=250px, width=250px");
 };
 
 const btn_resize = document.createElement('button');
