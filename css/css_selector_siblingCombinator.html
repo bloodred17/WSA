@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div + p + p {
+            color: blue;
+        }
+        div ~ p {
+            font-size: 30px;
+        }
+        p ~ h2{
+            color: red;
+        }
+        div p{
+            color: purple;
+            font-size: 20px;
+        }
+        div{
+            text-align: center;
+            margin: 30px;
+            border: 3px solid orange;
+        }
+        div:hover{
+            background-color: orangered;
+        }
+        div:hover > h2{
+            font-family: Helvetica;
+            font-size: 30px;
+            color: white;
+        }
+        div:active {
+            background-color: blueviolet;
+        }
+        div:active  p {
+            color: greenyellow;
+            font-family: Helvetica;
+        }
+        h2:hover{
+            display: inline-block;
+            background-color: black;
+        }
+        h2::first-letter{
+            color: aqua;
+        }
+        p::selection{
+            background-color: yellowgreen;
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>First Heading</h2>
+        <nav>
+            <p>This is child paragraph of division.</p>
+        </nav>
+        <h2>Second Heading</h2>
+        <p>This is second paragraph</p>
+    </div>
+    <p>This is first and adjaecent paragraph to division.</p>
+    <p>This is second paragraph to division.</p>
+    <h2>Heading - Programming language</h2>
+    <p>hello world</p>
+    <h2>pokemon</h2>
+</body>
+</html>
