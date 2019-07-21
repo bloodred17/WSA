@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery-3.3.1.min.js"></script>
+    <style>
+        /* body{
+            margin: 0;
+            padding: 0;
+        } */
+        #div1{
+            height: 100px;
+            width: 300px;
+            padding: 20px;
+            margin: 3px;
+            border: 2px solid red;
+            background-color: yellow;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                console.log("Width of div: "+ $("#div1").width());
+                console.log("Height of div: "+ $("#div1").height());
+                console.log("Height of inner div: "+ $("#div1").innerHeight());
+                console.log("Outer width of div: "+ $("#div1").outerWidth());
+                console.log("Outer height of div: "+ $("#div1").outerHeight());
+                console.log("Outer width of div: "+ $("#div1").outerWidth(true));
+                console.log("Outer height of div: "+ $("#div1").outerHeight(true));
+            });
+        });
+    </script>
+</head>
+<body>
+    <div  id="div1"></div>
+    <button id="btn">Click to print dimentions</button>
+</body>
+</html>

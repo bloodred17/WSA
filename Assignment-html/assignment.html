@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Helvetica;
+        }
+        h1::before{
+            content: "***";
+            margin-right:  250px;
+        }
+        h1::after{
+            margin-left:  250px;
+            content: "***";
+        }
+        h3{
+        }
+        h1,h3{
+            text-align: center;
+        }
+        h3::selection{
+            color: white;
+            background-color: black;
+        }
+        .image_container{
+            /* border: 1px solid blue; */
+            margin: 0 30%;
+            /* padding: -10px; */
+        }
+        .image_container img{
+            display: inline-block;
+            /* border: 1px solid blue; */
+        }
+        .image_container img:hover{
+            transform: scale(1.2);
+        }
+        /* //links */
+        .links > ul :link{
+            color: blue;
+        }
+        .links > ul :visited{
+            color: red;
+        }
+        .links > ul :hover{
+            color:blueviolet;
+        }
+        .links > ul :active{
+            background-color: aqua;
+            color: yellow;
+        }
+
+        /* .links > ul > li + li + li :active{
+
+        } */
+
+        /* // para */
+        p{
+            border: 3px solid orange;
+            margin: 10px 30%;
+            text-align: center
+        }
+        .first_para::first-letter{
+            /* text-transform: capitalize; */
+            color: red;
+        }
+        .second_para::first-line{
+            text-transform: uppercase;
+        }
+        #form_container_section{
+            /* display: none; */
+            border: 1px solid black;
+            background-color: rgba(59, 59, 59, 0.733);
+        }
+        .form_container{
+            border: 1px solid grey;
+            margin: 10% 40%;
+            padding: 2% 2%;
+            text-align: center;
+            background-color: rgb(233, 233, 233);
+            border-radius: 7px;
+        }
+        input{
+            display: block;
+            margin: 20px auto;
+            padding: 5px 10px;
+        }   
+        input:focus{
+            background: gold;
+        }
+        input::placeholder{
+            font-style: italic;
+        }
+        button{
+            background-color: greenyellow;
+            border: 2px solid darkgreen;
+            color: darkslategrey;
+            border-radius: 20px;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hello Potato</h1>
+        <h3>Do you like Potatoes?</h3>
+    </header>
+
+    <section>
+        <div class="image_container">
+            <img src="../html/resources/images/potato.png" alt="potato">
+            <img src="../html/resources/images/potato.png" alt="potato">
+            <img src="../html/resources/images/potato.png" alt="potato">
+            <img src="../html/resources/images/potato.png" alt="potato">
+        </div>
+    </section>
+
+    <div class="links">
+        <ul>
+            <li><a href="#">link1</a></li>
+            <li><a href="#">link2</a></li>
+            <li><a href="#form_container_section">link3</a></li>
+        </ul>
+    </div>
+
+    <p class="first_para">This potato is awesome</p>
+    <p class="second_para">eat potato!!!!</p>
+
+    <section id=form_container_section>
+        <div class="form_container">
+            <form action="">
+                <label for="name"></label>
+                <input type="text" placeholder="Name">
+                <label for="size"></label>
+                <input type="number" placeholder="Size of Potato (cm)">
+                <button type="submit">Button</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        const fcs = document.getElementById("form_container_section");
+        fcs.style.display = "none";
+        fcs.style.position = "fixed";
+        fcs.style.top = "0px";
+        fcs.style.left = "0px";
+        fcs.style.height = "100vh";
+        fcs.style.width = "100vw";
+        fcs.style.zIndex = "9";
+        const link = document.querySelector(".links > ul > li + li + li").firstChild;
+        link.addEventListener("click", () => {
+            fcs.style.display = "block";
+        });
+    </script>
+</body>
+</html>

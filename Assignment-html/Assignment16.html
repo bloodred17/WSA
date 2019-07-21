@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Potato</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Helvetica;
+            text-align: center;
+            /* height: 100vh; */
+            background-image: url("./Assignment16/Tom Clancy's Rainbow Six® Siege2019-2-6-20-44-47.jpg");
+        }
+        .main{
+            height: 100vh;
+            position: relative;
+        }
+        header{
+            border: 1px solid black;
+            background-color: rgba(0,0,0,0.85);
+            color: white;
+            padding-bottom: 20px;
+        }
+        header h1{
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            letter-spacing: 1.5px;
+            font-size: 30px
+        }
+        header nav span:hover{
+            font-size: 22px;
+            padding-bottom: 3px;
+            border-bottom: 4px solid aquamarine;
+        }
+        a{
+            text-decoration: none;
+            margin: 10px 20px;
+            /* margin-bottom: 20px; */
+        }
+        header nav span{
+            color: white;
+        }
+        .home{
+            /* border: 1px solid bl; */
+            padding: 1px;
+            background-color: rgba(240, 248, 255, 0.87);
+            /* border: 1px solid blue; */
+            margin-top: 10px;
+        }
+        /* .home h2{
+        } */
+        .images{
+            text-align: center;
+        }
+        .images img{
+            height: 300px;
+            width: 500px;
+        }
+        /* .images figcaption{
+            background-color: white;
+            width: 500px;
+        } */
+        .about_us{
+            margin: 10px 0;
+            background-color: rgba(240, 248, 255, 0.87);
+            height: 12vh;
+            padding: 2px 0px;
+        }
+        footer{
+            background-color: rgba(0,0,0,0.85);
+            color: white;
+            position: absolute;
+            width: 100%;
+            bottom: 0px;
+        }
+    </style>
+</head>
+<body>
+    <section class="main">
+
+        <header>
+            <h1>Ubisoft Montreal</h1>
+            <nav>
+                <a href="#home"><span>Home</span></a>
+                <a href="#about_us"><span>About Us</span></a>
+                <a href="#contact_us"><span>Contact Us</span></a>
+            </nav>
+        </header>
+        <article class="home">
+            <h2>Rainbow Six: Siege</h2>
+            <p>
+                Rainbow Six: Siege is a FPS game by Ubisoft that is available on both PC and console. 
+            </p>
+            <div class="images">
+                <figure>
+                    <img src="./Assignment16/Tom Clancy's Rainbow Six® Siege2019-3-5-7-15-58.jpg" alt="wind_bastion">
+                    <figcaption>DLC: Wind Bastion</figcaption>
+                </figure>
+                <p>Wind Bastion is the DLC that features 2 new operators from Morocco</p>
+            </div>
+        </article>
+        <section class="about_us">
+            <p>
+                We are a team of developers and gaming enthusiasts who develop multiplayer games.
+            </p>
+        </section>
+        <footer>
+            <p>&copy; Ubisoft Montreal All Rights Reserved</p>
+        </footer>
+    </section>
+    </body>
+    </html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Guitar World</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header.top{
+            border: 1px solid rgb(24, 24, 24);
+            height: 8vh;
+            letter-spacing: 1.2px;
+            font-family: impact;
+            color: white;
+            background-color: rgb(39, 35, 35);
+            text-align: center;
+        }
+        .top h1{
+            margin: 10px auto;
+        }
+        .navigation{
+            border: 1px solid blue;
+            height: 90vh;
+            float: left;
+            width: 15vw;
+            /* transition-delay: 1s; */
+        }
+        .navigation nav{
+            border: 1px solid red;
+            margin: 50px 20px;
+            padding: 10px 25px;
+            background-color: rgb(39, 35, 35);
+            border-radius: 7px;
+        }
+        .navigation a{
+            text-decoration: none;
+        }
+        .navigation span:hover{
+            border-top: 2px solid whitesmoke;
+            border-right: 3px solid whitesmoke;
+            border-bottom: 1px solid whitesmoke;
+            /* border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px; */
+            border-radius: 15px;
+            padding: 7px 5px;
+        }
+        .navigation nav span{
+            display:block;
+            margin: 25px auto;
+            color: snow;
+            font-family: Helvetica;
+        }
+        .content_wrapper{
+            height: 90vh;
+            border: 1px solid red;
+            float: left;
+            width: 50vw;
+            position: relative;
+            /* padding: 5px; */
+        }
+        .content_wrapper header{
+            margin: 10%;
+        }
+        .content_wrapper footer{
+            /* border: 1px solid black; */
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            padding: 20px 0px;
+            text-align: center;
+            background-color: gray;
+        }
+        .content_wrapper footer span{
+            font-family: impact;
+            word-spacing: 5px;
+            /* margin-left: 50px; */
+            color: aliceblue;
+        }
+        .image_wrapper{
+            height: 90vh;
+            border: 1px solid blue;
+            float: left;
+            width: 33vw;
+        }
+        .images img{
+            height: 200px;
+            width: 200px;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="top">
+        <h1>Guitar World</h1>
+    </header>
+    <aside class="navigation">
+        <nav>
+            <a href=""><span>Accoustic Guitars</span></a>
+            <a href=""><span>Electric Guitars</span></a>
+            <a href=""><span>Ascessories</span></a>
+            <a href=""><span>Events</span></a>
+            <a href=""><span>Contact Us</span></a>
+        </nav>
+
+        <header class="aside">
+            <h2>Rock Never Dies</h2>
+        </header>
+    </aside>
+
+    <article class="content_wrapper">
+        <header>
+            <section>
+                <h3>Guitar Learning Resources</h3>
+            </section>
+            <section class="content">
+                <ul>
+                    <li>Lick Library</li>
+                    <li>Udemy</li>
+                    <li>Ultimate Guitar</li>
+                    <li>Rock House</li>
+                    <li>Fretboard Mastery</li>
+                </ul>
+            </section>
+        </header>
+        <footer>
+            <span>&copy; All Rights Reserved Guitar World</span>
+        </footer>
+    </article>
+
+    <aside class="image_wrapper">
+        <section class="Caption">Gallary</section>
+        <section class="images">
+            <img src="../html/resources/images/potato.png" alt="potato">
+            <img src="../html/resources/images/potato.png" alt="potato">
+            <img src="../html/resources/images/potato.png" alt="potato">
+            <img src="../html/resources/images/potato.png" alt="potato">
+        </section>
+    </aside>    
+</body>
+</html>

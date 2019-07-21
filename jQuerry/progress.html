@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery-3.3.1.min.js"></script>
+    <script>
+        // let progress = 0;
+        // function progressBar(x,funcName){
+        //     funcName(x);
+        // }
+        // // function progress(x)
+        // $(document).ready(function(){
+        //     $("#btn").click(function(){
+        //         $("#box").animate({
+        //             width: "300"+"px"
+        //         },{
+        //             duration: 3000,
+        //             easing: "linear",
+        //             percentage: 80,
+        //             step: function(x){ 
+        //                 console.log(x);
+        //                 $("#demo").text(Math.round(x*100/300)+"%");
+        //             }
+        //         });
+        //     });
+        // });
+
+
+                        // callback(x);
+        $(document).ready(function(){
+            $("#demo").css({
+                "margin-left": "20px",
+                // "position": "absolute",
+                "z-index": "9"
+            });
+            $("#btn").click(function(){
+                for(let i = 0; i < 300; i++){
+                    $("#box").animate({
+                        // width: "200"+"px";
+                        width: i+"px"
+                    },{
+                        duration: 500,
+                        easing: "linear",
+                        percentage: 80,
+                        step: function(x){ 
+                            console.log(x);
+                            $("#demo").text(Math.round(x*100/300)+"%");
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="btn">Start Progress Bar</button>
+
+    <div style="border:1px solid green; margin: 10px; width: 300px">
+        <div id="box" style="background: greenyellow; height:50px; width: 1px; border: 1px solid green">
+        </div>
+        <p id="demo"></p>
+    </div>
+</body>
+</html>

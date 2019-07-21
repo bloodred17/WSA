@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("#test1").text("First paragraph -replaced normal text");
+            });
+            $("#btn2").click(function(){
+                $("#test2").html("<div>Second paragraph - replaced bold text</div>");
+            });
+            $("#btn3").click(function(){
+                $("#test3").val("New value...");
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>jQuery DOM - Getting / Setting values</h2>
+    <p id="test1">This is first paragraph with sample text</p>
+    <p id="test2">This is second paragraph with simple text</p>
+    <p>Input box: <input type = "text" id="test3" value="Default text"></p>
+
+    <button id="btn1">Set Text</button>
+    <button id="btn2">Set HTML</button>
+    <button id="btn3">Set Value</button>
+</body>
+</html>
