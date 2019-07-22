@@ -41,6 +41,11 @@
         p.value{
             display: none;
         }
+        .exposed{
+            /* box-sizing: padding-box; */
+            padding: 5px;
+            border: 2px solid red;
+        }
     </style>
 </head>
 <body>
@@ -53,39 +58,39 @@
         <div class="btn btn-anim start_game"><p class="btn_txt">Start Game</p></div>
     </section>
     <section id="main_game" style="display: none">
-        <div class="box" id="cloud1">
+        <div class="box unexposed" id="cloud1">
             <img class="image" src="./resources/images/mound_hover.png" alt="yenguin">
             <p class="value"></p>
         </div>
-        <div class="box" id="cloud2">
+        <div class="box unexposed" id="cloud2">
             <img class="image" src="./resources/images/mound_hover.png" alt="yenguin">
             <p class="value"></p>
         </div>
-        <div class="box" id="cloud3">
+        <div class="box unexposed" id="cloud3">
             <img class="image" src="./resources/images/mound_hover.png" alt="yenguin">
             <p class="value"></p>
         </div>
-        <div class="box" id="cloud4">
+        <div class="box unexposed" id="cloud4">
             <img class="image" src="./resources/images/mound_hover.png" alt="yenguin">
             <p class="value"></p>
         </div>
-        <div class="box" id="cloud5">
+        <div class="box unexposed" id="cloud5">
             <img class="image" src="./resources/images/mound_hover.png" alt="yenguin">
             <p class="value"></p>
         </div>
-        <div class="box" id="cloud6">
+        <div class="box unexposed" id="cloud6">
             <img class="image" src="./resources/images/mound_hover.png" alt="yenguin">
             <p class="value"></p>
         </div>
-        <div class="box" id="cloud7">
+        <div class="box unexposed" id="cloud7">
             <img class="image" src="./resources/images/mound_hover.png" alt="yenguin">
             <p class="value"></p>
         </div>
-        <div class="box" id="cloud8">
+        <div class="box unexposed" id="cloud8">
             <img class="image" src="./resources/images/mound_hover.png" alt="yenguin">
             <p class="value"></p>
         </div>
-        <div class="box" id="cloud9">
+        <div class="box unexposed" id="cloud9">
             <img class="image" src="./resources/images/mound_hover.png" alt="yenguin">
             <p class="value"></p>
         </div>
@@ -96,10 +101,11 @@
             <h2 class="score score_value"></h2>
         </div>
         <div class="controls">
-            <div class="btn btn-anim restart_game"><p class="btn_txt">Restart Game</p></div>
+            <div class="btn btn-anim restart_game"><p class="btn_txt">Go back to Main Menu</p></div>
         </div>
     </section>
     <script src="js/GameData.js"></script>
+    <script src="js/game_modes.js"></script>
     <script src="js/game_functions.js"></script>
     <script src="js/game_controls.js"></script>
     <script src="js/game.js"></script>
