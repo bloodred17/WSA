@@ -76,7 +76,7 @@ function shuffle(arr) {
 //     return sum;
 // };
 
-//------- Notic: Bug in the Old seeder logic ------------
+//------- Notice: Bug in the Old seeder logic ------------
 //assign random positions to penguins
 // const seeder = (gameData) => {
 //     const pin = pos(gameData.seed.length, gameData);
@@ -143,6 +143,32 @@ const dispenser = (data) => {
             renderImages(clicked.innerHTML, img);
             selected(clicked.innerHTML, gameData);
         });
+        
+        //When user hovers over box display question mark
+        cloud.addEventListener('mouseenter',(event) => {
+            let img = "hello";
+            const selected_box = event.target;
+            if(selected_box.className.split(" ").includes("unexposed")){
+                img = selected_box.firstChild.nextSibling;
+            }
+            if(selected_box.className === "image"){
+                img = selected_box.nextSibling.nextSibling.parentNode.firstChild.nextSibling;
+            }
+            img.src = "./resources/images/mound_hover.png";
+        });
+        
+        //When user leaves the box display cloud
+        cloud.addEventListener('mouseleave',(event) => {
+            let img = "hello";
+            const selected_box = event.target;
+            if(selected_box.className.split(" ").includes("unexposed")){
+                img = selected_box.firstChild.nextSibling;
+            }
+            if(selected_box.className === "image"){
+                img = selected_box.nextSibling.nextSibling.parentNode.firstChild.nextSibling;
+            }
+            img.src = "./resources/images/mound.png";
+        });
     });
 
 };
@@ -180,8 +206,6 @@ const selected = (input, gameData) => {
 //Keeps game running
 const gameMaker = () => {
     const gameData = getGameData();
-    // saveGameData(gameData);
-    // console.log("Starting size: "+pos(gameData.initial.length));
     dispenser(seeder(gameData));
 };
 
@@ -225,3 +249,17 @@ const renderImages = (input, imgElem) => {
     console.log("%cPutting penguin image: ","color: Yellow; font-size: 15px");
     console.log(imgElem);
 };
+
+//Stops the user from revealing hidden penguins by disabling the pointer
+//Removes the 'image' class so that eventListeners cannot point to the image 
+const disablePointer = () => {
+    const box = document.getElementsByClassName("unexposed");
+    const box_arr = [...box];
+    box_arr.forEach((cloud) => {
+        cloud.classList.add("disable_pointer");
+        cloud.firstChild.nextSibling.classList.remove("image");
+        //Cross browser solution below
+        // element.className = element.className.replace(/\bmystyle\b/g, "");
+    });
+};
+

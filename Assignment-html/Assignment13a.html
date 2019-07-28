@@ -1,0 +1,173 @@
+<!-- 
+Program Name: Make given website using table layout (Assignment 13 A)
+Start Date: 23 July 19
+End Date: 24 July 19
+Author: Ankur S Dutta
+Institute: WSA 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Assignment13A</title>
+    <style>
+        body{
+            font-family: helvetica;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color:rgb(230, 204, 255);
+        }
+        table{
+            border-collapse: collapse;
+            height: 100vh;
+        }
+        .heading td{
+            /* column-span: "3"; */
+            width: 100vw;
+            border: 3px solid rebeccapurple;
+            height: 10vh;
+            padding-bottom: 10px;
+            margin: 20px;
+            background-color: blueviolet;
+            color: white;
+        }
+        .heading td nav a{
+            color: white;
+            display: inline-block;
+            margin: auto 10px;
+            text-decoration: none;
+            padding: 5px;
+            transition: border-right 0.5s, background-color 1.5s;
+        }
+        .heading td nav a:hover{
+            border-right: 3px solid snow;
+            background-color: #4E1880;
+        }
+        aside{
+            width: 10%;
+            margin: 5px;
+        }
+        #aside-left nav{
+            border: 4px solid #BE20E8;
+            margin-left: 1%;
+            display: inline-block;
+        }
+        .left nav a{
+            display: inline-block;
+            /* box-sizing: border-box; */
+            padding: 5px;
+        }
+        .left nav a :hover{
+            transition: background-color 2s;
+            border-bottom: 3px solid white;
+            padding: 5px;
+            background-color: white;
+            /* border-bottom: 1px solid rgba(255, 255, 255, 0); */
+        }
+        .left span{
+            display: block;
+        }
+        #aside-right{
+            display: inline-block;
+            width: 15vw;
+            text-align: center;
+            /* border: 1px solid red; */
+        }
+        #aside-right img{
+            margin: 0 10px;
+            margin-bottom: 30px;
+            height: 100px;
+            width: 100px;
+            display: inline-block;
+            /* border: 1px solid blue; */
+            padding: 13px;
+        }
+        #aside-right img:hover{
+            box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.699);
+            transition: box-shadow 1s ease-out;
+        }
+        article{
+            /* float: left; */
+            width: 40%;
+            /* border: 1px solid blue; */
+            padding: 5% 2%;
+            margin: auto 20vw;
+        }
+        
+        .foot td{
+            height: 8vh;
+            padding: 10px;
+            /* width: 100vw; */
+            background-color: #4E1880;
+            margin: 20px;
+            color: white;
+            border: 2px solid #C07DFF;
+        }
+        .aside-link{
+            margin: 10px;
+            text-decoration: none;
+            color: #FF24E6;
+            display: block;
+        }
+        .foot td{
+            height: 10vh;   
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <table border="0">
+            <tr class="heading">
+                <td colspan="3">
+                    <h1>Web Development</h1>
+                    <nav>
+                        <a target="_blank" href="https://html.com"><span>HTML</span></a>
+                        <a target="_blank" href="https://html.com/css"><span>CSS</span></a>
+                        <a target="_blank" href="https://www.javascript.com/"><span>Javascript</span></a>
+                        <a target="_blank" href="https://jquery.com/"><span>JQuerry</span></a>
+                        <a target="_blank" href="https://angular.io/"><span>Angular</span></a>
+                        <a target="_blank" href="https://nodejs.org"><span>NodeJS</span></a>
+                    </nav>
+                </td>
+            </tr>
+            <tr class="body">
+                <td class="left">
+                    <aside id="aside-left">
+                        <nav>
+                            <a class="aside-link" target="_blank" href="https://html.com"><span>HTML</span></a>
+                            <a class="aside-link" target="_blank" href="https://html.com/css"><span>CSS</span></a>
+                            <a class="aside-link" target="_blank" href="https://www.javascript.com/"><span>Javascript</span></a>
+                            <a class="aside-link" target="_blank" href="https://jquery.com/"><span>JQuerry</span></a>
+                            <a class="aside-link" target="_blank" href="https://angular.io/"><span>Angular</span></a>
+                            <a class="aside-link" target="_blank" href="https://nodejs.org"><span>NodeJS</span></a>
+                        </nav>
+                    </aside>
+                </td>
+                <td class="center">
+                    <article>
+                        New year, new time to think about web design trends.
+                        The start of the year is a great time to look back on the previous year and your successes and look ahead to things that you want to improve and change.
+                        And that goes for website design trends and techniques as well. Many elements that gained popularity in the later part of 2018 will continue to emerge as trends in 2019. These trending elements include everything to color choices, typography and text usage, voice and VR interfaces and everything UX.
+                        There are so many great things happening in web design right now that it was tough to break it down, but we hope you’ll enjoy our look at the top 17 web design and UI trends for 2019.7
+                    </article>
+                </td>
+                <td class="images">
+                    <aside id="aside-right">
+                        <img src="./Assignment13/html5.png" alt="html5">
+                        <img src="./Assignment13/css3.png" alt="css3">
+                        <img src="./Assignment13/javascript.png" alt="javascript">
+                    </aside>
+                </td>
+            </tr>
+            <tr class="foot">
+                <td colspan="3">
+                    <p>&copy webdev</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

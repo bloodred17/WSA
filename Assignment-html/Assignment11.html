@@ -13,17 +13,91 @@ Institute: WSA
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        body{
+        }
+        .main::after{
+            /* background-image: ; */
+            background: url("./Assignment11/university_logo.jpg") no-repeat center;
+            /* background-size: 300px 250px; */
+            /* opacity: 0.6; */
+            background-size: contain;
+            content: "";
+            display: block;
+            position: absolute;
+            top: 50vh;
+            left: 50vw;
+            width: 20%;
+            height: 20%;
+            z-index: -1;
+            opacity: 0.6;
+            transform: translate(-150px, -50px);
+        }
+        .main{
+            border: 10px solid;
+            border-image: url("./Assignment11/border-image-metallic.png") 30 round;
+            border-image-slice: 20 22;
+            background-color: rgba(241, 241, 160, 0.6);
+            z-index: -5;
+        }
+        .logo{
+            border-radius: 100px;
+            padding: 5px 9px;
+            /* padding-bottom: 5px; */
+            border: 1px solid darkorange;
+            float: left;
+            overflow: hidden;
+        }
+        .main img{
+            object-fit: contain;
+            height: 100px;
+            width: 100px;
+            
+        }
+        .barcode{
+            /* border: 3px solid blue; */
+            display: inline-block;
+        }
+        .barcode img{
+            height: 50px;
+            width: 100px;
+        }
+        .signature{
+            /* border: 2px solid red; */
+            float: right;
+            margin-left: 15px;
+            background-color: white;
+            margin
+        }
+        .signature img{
+            /* border: 2px solid blue; */
+            height: 50px;
+            width: 70px;
+            margin: 7px 5px 0 0;
+        }
+        .extra_subjects{
+            /* border: 3px solid red; */
+            clear: both;
+            width: 100%;
+            margin: 5px 0;
+        }
+        .foot{
+            margin: 7px 0;
+        }
+    </style>
 </head>
 <body>
     
     
-    <div style="margin: auto 380px; background-color: lightgoldenrodyellow; border: 2px solid darkorange; padding: 14px">
-        <img src="./Assignment11/university_logo.jpg" alt="university logo" style="object-fit: contain; height: 100px; width: 100px; float: left">
+    <div class="main" style="margin: auto 380px; padding: 14px">
+        <div class="logo">
+            <img src="./Assignment11/university_logo.jpg" alt="university logo">
+        </div>
 
-        <h1 style="text-align: center; font-family: Georgia, 'Times New Roman', Times, serif; font-size: 52px">Drury University</h1>
-        <h3 style="text-align: center; font-family: Georgia, 'Times New Roman', Times, serif; font-size: 36px">Marksheet</h3>
-        <h4 style="text-align: center; font-family: Georgia, 'Times New Roman', Times, serif; font-size: 24px">Statement of marks: Bachelor of Arts</h4>
-        <h4 style="text-align: center; font-family: Georgia, 'Times New Roman', Times, serif; font-size: 20px">Examination</h4>
+        <h1 style="text-align: center; font-family: Georgia, 'Times New Roman', Times, serif; font-size: 33px">Drury University</h1>
+        <h3 style="text-align: center; font-family: Georgia, 'Times New Roman', Times, serif; font-size: 22px">Marksheet</h3>
+        <h4 style="text-align: center; font-family: Georgia, 'Times New Roman', Times, serif; font-size: 20px">Statement of marks: Bachelor of Arts</h4>
+        <h4 style="text-align: center; font-family: Georgia, 'Times New Roman', Times, serif; font-size: 17px">Examination</h4>
     
         <table class="student_details">
             <tr>    <td>Roll No.:</td>  <td>133520011107</td> </tr>    
@@ -35,7 +109,6 @@ Institute: WSA
         <br>
 
         <center>
-            
             <table class="student_marks" border="2" style="border-collapse: collapse; ">
                 <tr>
                     <th rowspan="2">Name of Subjects</th> 
@@ -84,7 +157,7 @@ Institute: WSA
             </table>
             <br>
         </center>
-        <table border="1" style="border-collapse: collapse">
+        <table class="extra_subjects" border="1" style="border-collapse: collapse">
             <tr>
                 <th>Qualifying Subjects</th>    <th>Marks</th>  <th>Result</th>
             </tr>
@@ -95,6 +168,15 @@ Institute: WSA
                 <td>RASHTRA GAURAV</td> <td>-</td>  <td>NOT CLEAR</td>
             </tr>
         </table>
+        <div class="barcode foot">
+            <img src="./Assignment11/barcode.png" alt="barcode">
+        </div>
+
+        <div class="signature foot">
+            <img src="./Assignment11/signature3.svg" alt="signature">
+            <img src="./Assignment11/signature4.svg" alt="signature">
+            <img src="./Assignment11/signature5.svg" alt="signature">
+        </div>
     </div>
     </body>
     </html>

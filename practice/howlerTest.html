@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="../JSProject/WhackAPenguin/node_modules/howler/src/howler.core.js"></script>
+</head>
+<body>
+    <button id="btn">Fade</button>
+
+    <script>
+        var sound = new Howl({
+        src: ['./welcomeTest.mp3'],
+        autoplay: true,
+        loop: true,
+        volume: 0.2,
+        rate: 1.5,
+        onend: function() {
+                console.log('Finished!');
+            }
+        });
+        // sound.play();
+        const button = document.getElementById("btn");
+        console.log(button);
+        button.addEventListener('click', () => {
+            sound.fade(0.5,0,3000);
+        });
+    </script>
+</body>
+</html>

@@ -2,5 +2,6 @@ document.body.onload = () => {
     localStorage.removeItem('GameData');
 };
 
-let gameData = getGameData();
+// let gameData = getGameData();
+
 gameMaker();

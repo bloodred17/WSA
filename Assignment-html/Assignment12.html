@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Assignment 12</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            font-family: helvetica;
+            background: url("./Assignment12/background2.jpg");
+            color: white;
+        }
+        header{
+            /* border: 1px solid red;  */
+            float: left;
+            height: 350px;
+            width: 400px;
+            margin: 0 10px;
+            padding: 1px;
+        }
+        .head_bar{
+            /* background-color: skyblue; */
+            background-image: linear-gradient(white, rgb(10, 123, 168));
+            height: 35px;
+            margin: 80px 0;
+            border-radius: 2px;
+        }
+        .head_bar span{
+            background-color: white;
+            margin: 4px 25px;
+            display: inline-block;
+            padding: 4px 15px;
+            border-radius: 50px;
+            color: rgb(4, 4, 46);
+            padding-right: 100px;
+            position: relative;
+        }
+        .dot{
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            background-color: aqua;
+            position: absolute;
+            bottom: 8px;
+            border: 2px solid aquamarine;
+            right: 10px;
+            border-radius: 50px;
+            /* text-align: right; */
+        }
+        .heading h1{
+            margin-bottom: -20px;
+            color:red;
+            font-size: 40px;
+        }
+        .heading h1:first-child{
+            color: beige;
+            margin-top: 100px;
+            /* border:1px solid black; */
+        }
+        .heading p{
+            font-size: 20px;
+        }
+        header p{
+            font-family: sans-serif;
+            font-weight: bolder;
+        }
+        .image{
+            /* margin-top: 10px; */
+            clear: right;
+            /* border: 1px solid red; */
+        }
+        img{
+            float: left;
+            margin: 20px 10px 10px 10px;
+            height: 350px;
+            width: 540px;
+            border-radius: 8px;
+        }
+        img:hover{
+            box-shadow: 0 3px 10px white;
+            transition: box-shadow 1s;
+        }
+        img:not(:hover){
+            box-shadow: 0 0 0 black;
+            transition: box-shadow 1s;
+        }
+        article {
+            backdrop-filter: blur(20px);
+            /* clear:both; */
+            /* clear: left; */
+            display: inline-block;
+            padding: 10px;
+            column-count: 2;
+            font-style: bold;
+        }
+        .article0{
+            float: left;
+            column-fill: auto;
+            width: 500px;
+            column-width: 470px;
+            text-align: justify;
+            margin-top: 15px;
+        }
+        article h3{
+            color: rgb(96, 223, 255);
+        }
+        article > *{
+            background-color: rgba(0, 0, 0, 0.25);
+        }
+        article > *:hover{
+            background-color: black;
+            transition: background-color 0.8s;
+        }
+        footer{
+            /* border: 1px solid black; */
+            margin-left: 50%;
+            text-align: center;
+            bottom: 0;
+            /* position: fixed; */
+            background-color: black;
+            display: inline-block;
+            height: 40px;
+            transform: translate(-150px,0);
+            border: 2px solid white;
+            border-radius: 30px;
+            padding: auto 15px;
+        }
+        footer span:first-child{
+            color: blueviolet;
+        }
+        footer span:last-child{
+            color: red;
+        }
+        footer span{
+            margin: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="head_bar">
+            <span>NASA <div class="dot"></div></span>
+        </div>
+        <div class="heading">
+            <h1>Space Is</h1>
+            <h1>Full Of Mysteries</h1>
+            <p>Space Exploration</p>
+        </div>
+        <p>By Buzz Aldrin</p>
+    </header>
+    
+    <img src="./Assignment12/astronaut.jpg" alt="Astronaut">
+    <!-- <div class="image">
+    </div> -->
+
+    <article class="article0">
+        <p>
+            
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui ullam suscipit iure ipsam nihil saepe aliquid adipisci impedit nostrum, odit dignissimos consequuntur dolorum dolor, obcaecati tempore assumenda optio similique voluptas!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus voluptatibus aliquam soluta. Ad natus architecto harum error laudantium magnam recusandae veniam, earum incidunt quae! Ab excepturi sapiente doloribus quae nihil.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus cumque id, non dolorem error voluptatibus distinctio fugiat velit sit quam dolor eum sunt quia eaque eius dignissimos optio corporis nobis.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum aperiam similique architecto deserunt consequatur veritatis totam reiciendis doloremque ut minus recusandae quo itaque dolorum ipsa placeat vel, cumque sunt ullam.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias rerum temporibus hic! Saepe corrupti, dignissimos officiis repellat recusandae vitae beatae vel quae cumque quasi laudantium est vero. Deleniti, velit ad?
+            lore
+        </p>
+    </article>    
+    <article class="article1">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi similique autem eos consequatur dolore sequi. Provident quidem consequatur numquam vitae animi asperiores, veritatis repellat accusantium dolorem? Dolorem, adipisci quam? Nostrum!
+        </p>
+        
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum eaque quisquam aut harum ullam magni doloribus nobis consectetur totam ipsa aliquam dolorem ratione voluptates quos accusantium, expedita amet eligendi nostrum! Lorem ipsum, dolor sit amet 
+        </p>
+
+        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis aliquid ipsum doloribus ipsam quaerat libero. Non voluptates dolor ad asperiores dolore aliquam minus quis et facere ab. Sunt, culpa eaque.</h3>
+        
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum voluptatum ad ut repellendus illo voluptatem, voluptatibus saepe ea eum consequuntur aut totam quam harum adipisci mollitia eveniet? Tempore, blanditiis itaque?
+            Quasi, ullam at sapiente repudiandae assumenda saepe debitis? Obcaecati nemo nobis architecto esse porro consequatur tempora repellat ratione expedita ea natus facere unde, dicta, laboriosam assumenda quia nisi sit. Modi.
+            Saepe ullam enim autem iusto recusandae tempore itaque dolorum, beatae soluta quisquam, quos, suscipit nihil. Suscipit tempore, fugit aspernatur eius, officiis rem est dolorum voluptas, quaerat veniam reiciendis aut facilis.
+        </p>
+        
+        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis aliquid ipsum doloribus ipsam quaerat libero. Non ab. Sunt, culpa eaque.</h3>
+        
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum voluptatum ad ut repellendus illo voluptatem, voluptatibus saepe ea eum consequuntur aut totam quam harum adipisci mollitia eveniet? Tempore, blanditiis itaque?
+            Quasi, ullam at sapiente repudiandae assumenda saepe debitis? Obcaecati nemo nobis architecto esse porro consequatur tempora repellat ratione expedita ea natus facere unde, dicta, laboriosam assumenda quia nisi sit. Modi.
+
+        </p>
+    </article>
+    <!-- <article class="article2">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi similique autem eos consequatur dolore sequi. Provident quidem consequatur numquam vitae animi asperiores, veritatis repellat accusantium dolorem? Dolorem, adipisci quam? Nostrum!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil beatae maiores eligendi eaque praesentium ex tempore soluta molestias libero sed adipisci non, dignissimos quis? Recusandae dolor dolorem assumenda molestiae aperiam.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius iste ullam ipsa et ducimus, tenetur fuga accusantium molestias ea vero nemo, hic facilis eligendi maiores dolorum sequi pariatur optio! Repellat?
+        </p>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum eaque quisquam aut harum ullam magni doloribus nobis consectetur totam ipsa aliquam dolorem ratione voluptates quos accusantium, expedita amet eligendi nostrum! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum consequatur quaerat aliquid, blanditiis ipsa esse iusto provident rem excepturi nam quod ex nobis neque dolorem veniam dicta labore porro a?
+        </p>
+
+        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis aliquid ipsum doloribus ipsam quaerat libero. Non voluptates dolor ad asperiores dolore aliquam minus quis et facere ab. Sunt, culpa eaque.</h3>
+        
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum voluptatum ad ut repellendus illo voluptatem, voluptatibus saepe ea eum consequuntur aut totam quam harum adipisci mollitia eveniet? Tempore, blanditiis itaque?
+            Quasi, ullam at sapiente repudiandae assumenda saepe debitis? Obcaecati nemo nobis architecto esse porro consequatur tempora repellat ratione expedita ea natus facere unde, dicta, laboriosam assumenda quia nisi sit. Modi.
+            Saepe ullam enim autem iusto recusandae tempore itaque dolorum, beatae soluta quisquam, quos, suscipit nihil. Suscipit tempore, fugit aspernatur eius, officiis rem est dolorum voluptas, quaerat veniam reiciendis aut facilis.
+        </p>
+        
+        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis aliquid ipsum doloribus ipsam quaerat libero. Non voluptates dolor ad asperiores dolore aliquam minus quis et facere ab. Sunt, culpa eaque.</h3>
+
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum voluptatum ad ut repellendus illo voluptatem, voluptatibus saepe ea eum consequuntur aut totam quam harum adipisci mollitia eveniet? Tempore, blanditiis itaque?
+            Quasi, ullam at sapiente repudiandae assumenda saepe debitis? Obcaecati nemo nobis architecto esse porro consequatur tempora repellat ratione expedita ea natus facere unde, dicta, laboriosam assumenda quia nisi sit. Modi.
+            Saepe ullam enim autem iusto recusandae tempore itaque dolorum, beatae soluta quisquam, quos, suscipit nihil. Suscipit tempore, fugit aspernatur eius, officiis rem est dolorum voluptas, quaerat veniam reiciendis aut facilis.
+        </p>
+    </article> -->
+
+    <footer>
+        <span>April 18, 2019</span>
+        <span>Page: 24</span>
+    </footer>
+</body>
+</html>

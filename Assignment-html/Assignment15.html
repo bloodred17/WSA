@@ -1,0 +1,202 @@
+<!-- 
+Program Name: Make given website using table layout (Assignment 13 A)
+Start Date: 24 July 19
+End Date: 24 July 19
+Author: Ankur S Dutta
+Institute: WSA 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Assignment-15</title>
+    <style>
+        @font-face {
+            font-family: 'GeForce';
+            src: url('./Assignment15/GeForce/GeForce-Bold.eot');
+            src: local('./Assignment15/GeForce/'), local('./Assignment15/GeForce-Bold'),
+                url('./Assignment15/GeForce-Bold.eot?#iefix') format('embedded-opentype'),
+                url('./Assignment15/GeForce-Bold.woff') format('woff'),
+                url('./Assignment15/GeForce-Bold.ttf') format('truetype');
+            font-weight: bold;
+            font-style: normal;
+        }
+        @font-face {
+        font-family: "GeForce";
+        src: url("./Assignment15/GeForce/GeForce-Bold.eot");
+        src:
+        url("./Assignment15/GeForce/GeForce-Bold.woff") format("woff"),
+        /* url("./Assignment15/GeForce/") format("opentype"), */
+        /* url("css/fonts/Harabara.svg#filename") format("svg"); */
+        }
+        body{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        header{
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            background-image: url("./Assignment15/Nvidia-GeForce-GTX-Feature.jpg");
+            background-size: cover;
+            background-position: 20px -30px;
+            background-attachment: fixed;
+        }
+        .company_logo{
+            float:left;
+            /* border: 1px solid red; */
+            background-color: white;
+            /* border-radius: 200px; */
+            box-shadow: 0 0 8px green;
+            padding: 25px;
+            border-bottom-right-radius: 40px;
+        }
+        .company_logo:hover{
+            /* transform: translate(100, 400); */
+            /* margin: 5vh 6vh; */
+            transform: scale(1.3);
+            transition: all 1s ease-out;
+        }
+        /* .logos{
+            border: 1px solid blue;
+        } */
+        .logos img{
+            /* border: 1px solid red; */
+            background-color: rgb(212, 235, 224);
+            box-shadow: 0 0 7px green;
+            height: 50px;
+            width: 100px;
+            margin: 2vh 6vh 2vh 0;
+            float:right;
+            border-radius: 50px;
+        }
+        .heading{
+            border: 1px solid green;
+            text-align: center;
+            clear:right;
+            background-color: rgba(95, 95, 95, 0.911);
+            box-shadow: 0 0 7px green;
+        }
+        .company_logo:hover,
+        .heading:hover{
+            box-shadow: 0 0 17px green;
+            transition: box-shadow .5s;
+        }
+        .company_logo:not(:hover),
+        .heading:not(:hover){
+            box-shadow: 0 0 7px green;
+            transition: box-shadow .5s;
+        }
+        .heading h1{
+            font-family: 'GeForce',sans-serif;
+            color: white;
+        }
+        .gallery{
+            /* border: 1px solid orangered; */
+            height: 78vh;
+            position: relative;
+        }
+        /* .image{
+            
+        } */
+        /* .image img{
+            object-fit: contain;
+            object-fit: contain;
+            overflow: hidden;
+        } */
+        .contents{
+            /* border: 1px solid blue; */
+            height: 100vh;
+            background-color: green;
+        }
+        article{
+            background-color: white;
+            border: 2px solid green;
+            float: left;
+            width: 24%;
+            margin-top: 20vh;
+            border-radius: 30px;
+            padding: 20px;
+            height: 50vh;
+            margin-right: 65px;
+            text-align: center;
+        }
+        article:first-child{
+            margin-left: 84px;
+        }
+        article:hover{
+            border: 3px solid green;
+            box-shadow: 0 3px 7px black;
+            transition: all 0.5s;
+        }
+        .picture img{
+            height: 200px;
+            width: 300px;
+            border-radius: 10px;
+        }
+        .text{
+            padding: 10px 27px;
+        }
+        .text p{
+            font-family: helvetica;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="company_logo">
+            <img src="./Assignment15/Nvidia_image_logo.svg" alt="nviiea_logo">
+        </div>
+        <div class="logos">
+            <img src="./Assignment15/amd_logo.png" alt="logo">
+            <img src="./Assignment15/amd_logo.png" alt="logo">
+            <img src="./Assignment15/amd_logo.png" alt="logo">
+        </div>
+        <div class="heading">
+            <h1>NVIDIA</h1>
+        </div>
+        
+        <section class="gallery">
+            <div class="image">
+                <!-- <img src="./Assignment15/Nvidia-GeForce-GTX-Feature.jpg" alt="gtx"> -->
+            </div>
+        </section>
+    </header>
+
+    <section class="contents">
+        <article>
+            <div class="picture">
+                <img src="./Assignment15/maxresdefault.jpg" alt="img1">
+            </div>
+            <div class="text">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae minima soluta incidunt ratione perspiciatis repellat modi sunt voluptatum accusantium nam deserunt ab, sed eveniet pariatur cumque numquam rem doloremque delectus.
+                </p>
+            </div>
+        </article>
+        <article>
+            <div class="picture">
+                <img src="./Assignment15/maxresdefadafsult.jpg" alt="img2">
+            </div>
+            <div class="text">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae minima soluta incidunt ratione perspiciatis repellat modi sunt voluptatum accusantium nam deserunt ab, sed eveniet pariatur cumque numquam rem doloremque delectus.
+                </p>
+            </div>
+        </article>
+        <article>
+            <div class="picture">
+                <img src="./Assignment15/maxresdefsdfasault.jpg" alt="img3">
+            </div>
+            <div class="text">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae minima soluta incidunt ratione perspiciatis repellat modi sunt voluptatum accusantium nam deserunt ab, sed eveniet pariatur cumque numquam rem doloremque delectus.
+                </p>
+            </div>
+        </article>
+    </section>
+</body>
+</html>

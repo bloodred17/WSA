@@ -49,6 +49,7 @@ const renderTable = (todos) => {
         todo_row.appendChild(status);
         // todo_row.appendChild(remove);
 
+        // Disabling checkbox if checked
         if(todo_row.firstChild.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.firstChild.checked){
             todo_row.firstChild.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.firstChild.nextSibling.style.display = "none";
         }

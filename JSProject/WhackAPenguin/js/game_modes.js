@@ -39,7 +39,8 @@ const normalMode = (input, gameData) => {
         gameMaker();
     }else if(/yeti/.test(input) || !gameData.seed.find((e) => pattern.test(e))){
         gameData.points.push(input);
-        console.log("game over");
+        console.log("%cGame Over","font-family: Helvetica; font-size:25px; color: red");
+        disablePointer();
         window.setTimeout(() => {
             gameOver(gameData);
         },2000);
@@ -47,5 +48,5 @@ const normalMode = (input, gameData) => {
         console.log("invalid choice");
     }
     saveGameData(gameData);
-    console.log("Saving Game data...");
+    console.log("%cSaving Game data...", "color: aqua; font-size: 17px;");
 };

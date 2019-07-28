@@ -1,3 +1,10 @@
+<!-- 
+Program Name: Make given website using table layout (Assignment 16)
+Start Date: 21 July 19
+End Date: 24 July 19
+Author: Ankur S Dutta
+Institute: WSA 
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,6 +38,10 @@
             font-size: 30px
         }
         header nav span:hover{
+            transition: border-bottom 0.5s;
+            transition: padding-bottom 0.4s;
+        }
+        header nav span:hover{
             font-size: 22px;
             padding-bottom: 3px;
             border-bottom: 4px solid aquamarine;
@@ -47,7 +58,7 @@
             /* border: 1px solid bl; */
             padding: 1px;
             background-color: rgba(240, 248, 255, 0.87);
-            /* border: 1px solid blue; */
+            border: 4px dashed black;
             margin-top: 10px;
         }
         /* .home h2{
@@ -58,6 +69,18 @@
         .images img{
             height: 300px;
             width: 500px;
+
+        }
+        .images img:hover{
+            transform: scale(1.6);
+            box-shadow: 00px 100px 500px black;
+            transition: transform 2s ease-out, box-shadow 1.5s;
+        }
+        .images img:not(:hover){
+            transform: scale(1);
+            box-shadow: 00px 0px 0px black;
+            transition: transform 2s ease-out, box-shadow 1.5s;
+
         }
         /* .images figcaption{
             background-color: white;
@@ -68,6 +91,7 @@
             background-color: rgba(240, 248, 255, 0.87);
             height: 12vh;
             padding: 2px 0px;
+        border: 4px dotted black;
         }
         footer{
             background-color: rgba(0,0,0,0.85);
