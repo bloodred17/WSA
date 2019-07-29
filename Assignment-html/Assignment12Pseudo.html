@@ -51,7 +51,7 @@
             /* text-align: right; */
         }
         .heading h1{
-            margin-bottom: -20px;
+            margin-bottom: -30px;
             color:red;
             font-size: 40px;
         }
@@ -73,10 +73,11 @@
             /* border: 1px solid red; */
         }
         img{
-            float: left;
+            /* float: left; */
+            position: absolute;
             margin: 20px 10px 10px 10px;
-            height: 350px;
-            width: 540px;
+            height: 220px;
+            width: 500px;
             border-radius: 8px;
         }
         img:hover{
@@ -96,13 +97,25 @@
             column-count: 2;
             font-style: bold;
         }
-        .article0{
+        .article0 p::before{
+            content: "\0020";
+            /* border: 1px solid red; */
+            /* padding: 100px; */
+            /* display: inline-block; */
             float: left;
+            height: 200px;
+            width: 150px;
+        }
+        .article0{
+            float: right;
+            display: block;
+            /* padding: 5px; */
             column-fill: auto;
-            width: 500px;
+            width: 720px;
             column-width: 470px;
             text-align: justify;
             margin-top: 15px;
+            margin-right: 25px;
         }
         article h3{
             color: rgb(96, 223, 255);
@@ -113,6 +126,16 @@
         article > *:hover{
             background-color: black;
             transition: background-color 0.8s;
+        }
+        .article1 > p:first-child::first-letter{
+            /* font-size: 400%;  */
+            font-weight: bold; 
+            float: left; 
+            initial-letter: 2;
+            font-size: 50px;
+            color:red;
+            /* display: inline-block; */
+            /* width: 20px; */
         }
         footer{
             /* border: 1px solid black; */

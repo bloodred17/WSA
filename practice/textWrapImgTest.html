@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html {
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 18px;
+        }
+
+        body {
+        line-height: 1.5;
+        }
+
+        main {
+        max-width: 720px;
+        padding: 1rem;
+        margin: 0 auto;
+        }
+
+        h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        }
+
+        figure {
+        display: table;
+        }
+
+        img {
+        display: block;
+        max-width: 100%;
+        }
+
+        figure.left {
+        float: left;
+        /* border : 1px solid blue; */
+        }
+        figure img { 
+            margin-right: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        figure figcaption {
+            margin-right: 1.5rem;
+        }
+
+        figure.right {
+        float: right;
+        }
+        figure.right img {
+            margin-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        figure.right figcaption {   
+            margin-left: 1.5rem;
+        }
+
+        figcaption {
+        display: table-caption;
+        caption-side: bottom;
+        margin-bottom: 1rem;
+        font-size: 0.8rem;
+        }
+
+        p {
+        margin-bottom: 1rem;
+        }
+
+        strong {
+        font-weight: bold;
+        }
+
+        @media screen and (max-width: 600px) {
+        figure.left,
+        figure.right {
+            float: none;
+            width: 100%;
+            img {
+            width: 100%;
+            margin-right: 0;
+            margin-left: 0;
+            }
+            figcaption {
+            margin-right: 0;
+            margin-left: 0;
+            }
+        }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h2>Wrap Text Around Image w/ Caption</h2>
+        <figure class="left">
+            <img src="https://d1l9wtg77iuzz5.cloudfront.net/assets/5591/221795/max_width_extra_small_sunrise.jpg?1519945096" alt="">
+            <figcaption>
+            <strong>This is a long image caption.</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </figcaption>
+        </figure>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quisquam dignissimos odit, maiores enim aspernatur dolorum commodi sed ratione et ullam a laboriosam eaque repellendus qui quibusdam ipsa. Laudantium, consequuntur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quisquam dignissimos odit, maiores enim aspernatur dolorum commodi sed ratione et ullam a laboriosam eaque repellendus qui quibusdam ipsa. Laudantium, consequuntur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quisquam dignissimos odit, maiores enim aspernatur dolorum commodi sed ratione et ullam a laboriosam eaque repellendus qui quibusdam ipsa. Laudantium, consequuntur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quisquam dignissimos odit, maiores enim aspernatur dolorum commodi sed ratione et ullam a laboriosam eaque repellendus qui quibusdam ipsa. Laudantium, consequuntur. 
+        </p>
+        <h2>Wrap Text Around Image w/ Caption</h2>
+        <figure class="right">
+            <img src="https://d1l9wtg77iuzz5.cloudfront.net/assets/5591/221795/max_width_extra_small_sunrise.jpg?1519945096" alt="">
+            <figcaption>
+            <strong>This is a long image caption.</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </figcaption>
+        </figure>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quisquam dignissimos odit, maiores enim aspernatur dolorum commodi sed ratione et ullam a laboriosam eaque repellendus qui quibusdam ipsa. Laudantium, consequuntur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quisquam dignissimos odit, maiores enim aspernatur dolorum commodi sed ratione et ullam a laboriosam eaque repellendus qui quibusdam ipsa. Laudantium, consequuntur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quisquam dignissimos odit, maiores enim aspernatur dolorum commodi sed ratione et ullam a laboriosam eaque repellendus qui quibusdam ipsa. Laudantium, consequuntur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quisquam dignissimos odit, maiores enim aspernatur dolorum commodi sed ratione et ullam a laboriosam eaque repellendus qui quibusdam ipsa. Laudantium, consequuntur. 
+        </p>
+    </main>
+</body>
+</html>

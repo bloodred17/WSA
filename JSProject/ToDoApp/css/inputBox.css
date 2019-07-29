@@ -16,13 +16,14 @@
     border-bottom: 3px solid #FFF842;
     transition: border 0.3s ease-in;
 }
+/* td button, */
 .todo-func input,
 .todo-func button,
 .input_todo select,
 .input_todo input{
-    border-radius: 30px;
     padding: 0.3em 2em;
     margin: auto 1em auto 0;
+    border-radius: 30px;
     background-color: #2C3446;
     color: white;
     border: 2px solid rgb(22, 28, 41);
@@ -30,4 +31,12 @@
 .input_todo select:focus,
 .input_todo input:focus{
     border: 2px solid #FB667A;
+}
+td button{
+    padding: 0.3em 1em;
+    margin: auto 0.25em;
+    border-radius: 30px;
+    background-color: #2C3446;
+    color: white;
+    border: 2px solid rgb(22, 28, 41);
 }
