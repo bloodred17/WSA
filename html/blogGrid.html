@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: helvetica;
+        }
+        .container div{
+            padding: 20px;
+        }
+        @media only screen and (min-width: 510px){
+            body{
+                margin: 0;
+                padding: 0;
+            }
+            .container{
+                border: 1px solid black;
+                display: grid;  
+                grid-template-columns: 2fr 1fr;
+            }
+            .container div{
+                border: 2px solid blueviolet;
+            }
+            .blog{
+                grid-row: 1 / span 2;
+            }
+            .popular_posts{
+                grid-row: 2 / span 2;
+            }
+            .blog2{
+                grid-row: 3 / span 2;
+            }
+        }
+        @media only screen and (max-width: 500px){
+            body{
+                margin: 0;
+                padding: 0;
+            }
+            .container{
+                border: 1px solid black;
+                display: grid;  
+                grid-template-columns: auto;
+            }
+            .container div{
+                border: 2px solid blueviolet;
+
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="blog">
+            <header>
+                <h1>Heading 1</h1>
+            </header>
+            <img src="./resources/images/potato.png" alt="potato">
+            <article>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores quas minus quod nam laudantium quos, omnis in culpa! Alias error qui atque quisquam eum fugit doloribus laborum totam nulla ab!
+                </p>
+            </article>
+        </div>
+        <div class="about_me">
+            <p>I'm Ankur</p>
+        </div>
+        <div class="popular_posts">
+            <ul>
+                <li><span>1</span></li>
+                <li><span>2</span></li>
+                <li><span>3</span></li>
+            </ul>
+        </div>
+        <div class="blog2">
+            <header>
+                <h1>Heading 1</h1>
+            </header>
+            <img src="./resources/images/potato.png" alt="potato">
+            <article>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores quas minus quod nam laudantium quos, omnis in culpa! Alias error qui atque quisquam eum fugit doloribus laborum totam nulla ab!
+                </p>
+            </article>
+        </div>
+        <div class="follow_me">
+            <p>follow me</p>
+        </div>
+    </section>
+</body>
+</html>
