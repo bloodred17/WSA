@@ -1,0 +1,67 @@
+<!-- 
+Program Name: 10_trailer-of-movie
+Date: 1/7/19
+Author: Ankur S Dutta
+Institute: WSA 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trailer of a Movie</title>
+    <style>
+        .playlist{
+            background: linear-gradient(135deg, rgba(29, 29, 29, 0.05) 0%, rgba(29, 29, 29, 0.05) 17%,rgba(27, 27, 27, 0.05) 17%, rgba(27, 27, 27, 0.05) 34%,rgba(31, 31, 31, 0.05) 34%, rgba(31, 31, 31, 0.05) 93%,rgba(242, 242, 242, 0.05) 93%, rgba(242, 242, 242, 0.05) 100%),linear-gradient(135deg, rgba(129, 129, 129, 0.05) 0%, rgba(129, 129, 129, 0.05) 66%,rgba(117, 117, 117, 0.05) 66%, rgba(117, 117, 117, 0.05) 91%,rgba(199, 199, 199, 0.05) 91%, rgba(199, 199, 199, 0.05) 100%),linear-gradient(135deg, rgba(31, 31, 31, 0.07) 0%, rgba(31, 31, 31, 0.07) 15%,rgba(139, 139, 139, 0.07) 15%, rgba(139, 139, 139, 0.07) 23%,rgba(200, 200, 200, 0.07) 23%, rgba(200, 200, 200, 0.07) 29%,rgba(102, 102, 102, 0.07) 29%, rgba(102, 102, 102, 0.07) 100%),linear-gradient(90deg, rgb(19, 196, 228),rgb(126, 8, 222));
+            margin: 0 38%;
+            display: block;
+            border: 3px solid lightgray;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 2px 10px black;
+        }
+        .playlist:hover{
+            transform: translate(0,-400px);
+            box-shadow: 0 2px 20px black;
+            transition: transform 0.85s ease-out, box-shadow 0.3s;
+        }
+        .playlist:not(:hover){
+            box-shadow: 0 2px 10px black;
+            transition: transform 0.85s ease-out, box-shadow 0.3s;
+        }
+        iframe{
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body style="background: linear-gradient(90deg, rgba(228, 228, 228, 0.02) 0%, rgba(228, 228, 228, 0.02) 18%,rgba(4, 4, 4, 0.02) 18%, rgba(4, 4, 4, 0.02) 19%,rgba(114, 114, 114, 0.02) 19%, rgba(114, 114, 114, 0.02) 49%,rgba(81, 81, 81, 0.02) 49%, rgba(81, 81, 81, 0.02) 60%,rgba(14, 14, 14, 0.02) 60%, rgba(14, 14, 14, 0.02) 81%,rgba(115, 115, 115, 0.02) 81%, rgba(115, 115, 115, 0.02) 87%,rgba(211, 211, 211, 0.02) 87%, rgba(211, 211, 211, 0.02) 93%,rgba(25, 25, 25, 0.02) 93%, rgba(25, 25, 25, 0.02) 100%),linear-gradient(90deg, rgba(221, 221, 221, 0.1) 0%, rgba(221, 221, 221, 0.1) 9%,rgba(46, 46, 46, 0.1) 9%, rgba(46, 46, 46, 0.1) 33%,rgba(227, 227, 227, 0.1) 33%, rgba(227, 227, 227, 0.1) 49%,rgba(148, 148, 148, 0.1) 49%, rgba(148, 148, 148, 0.1) 51%,rgba(62, 62, 62, 0.1) 51%, rgba(62, 62, 62, 0.1) 54%,rgba(202, 202, 202, 0.1) 54%, rgba(202, 202, 202, 0.1) 86%,rgba(242, 242, 242, 0.1) 86%, rgba(242, 242, 242, 0.1) 96%,rgba(34, 34, 34, 0.1) 96%, rgba(34, 34, 34, 0.1) 100%),linear-gradient(90deg, rgba(83, 83, 83, 0.08) 0%, rgba(83, 83, 83, 0.08) 19%,rgba(160, 160, 160, 0.08) 19%, rgba(160, 160, 160, 0.08) 39%,rgba(93, 93, 93, 0.08) 39%, rgba(93, 93, 93, 0.08) 41%,rgba(131, 131, 131, 0.08) 41%, rgba(131, 131, 131, 0.08) 52%,rgba(40, 40, 40, 0.08) 52%, rgba(40, 40, 40, 0.08) 61%,rgba(204, 204, 204, 0.08) 61%, rgba(204, 204, 204, 0.08) 65%,rgba(55, 55, 55, 0.08) 65%, rgba(55, 55, 55, 0.08) 82%,rgba(233, 233, 233, 0.08) 82%, rgba(233, 233, 233, 0.08) 100%),linear-gradient(90deg, rgb(61, 95, 175),rgb(123, 196, 183),rgb(71, 40, 162))">
+    <!-- Trailer heading -->
+    <h1 style="font-family: 'Courier New', Courier, monospace; color: blue; display: inline-block; border-bottom: 3px solid lightblue; margin-left: 450px">Trailer</h1>
+    <!-- <hr size="3px" style="background-color: lightblue; border: none"> -->
+    <!-- trailer frame -->
+    <div style="text-align: center">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/4mW9FE5ILJs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    
+    <br>
+    <!-- Playlist heading -->
+    <h1 style="font-family: 'Courier New', Courier, monospace; color: greenyellow; display: inline-block; border-bottom: 3px solid orangered;  margin-left: 450px">Playlist</h1>
+    <!-- <hr size="3px" style="background-color: orangered; border: none"> -->
+
+    <div class="playlist" style="text-align: center">
+        <!-- Playlist songs -->
+        <h3 style="color: darkred; font-family:fantasy">Andromida - Celestial</h3>
+        <audio controls muted loop preload="metadata" src="./Assignment10/audio/Andromida-Celestial.mp3"></audio><br>
+        <h3 style="color: darkred; font-family:fantasy">Widek - Blue Moon</h3>
+        <audio controls muted loop preload="metadata" src="./Assignment10/audio/Widek - Blue Moon (feat. Stel Andre).mp3"></audio><br>
+        <h3 style="color: darkred; font-family:fantasy">Plini - Every Piece Matters</h3>
+        <audio controls muted loop preload="metadata" src="./Assignment10/audio/Plini–EVERY PIECE MATTERS.mp3"></audio><br>
+        <h3 style="color: darkred; font-family:fantasy">Tosiro Masuda - Akatsuki</h3>
+        <audio controls muted loop preload="metadata" src="./Assignment10/audio/naruto-akatsuki-theme-song.mp3"></audio><br>
+        <h3 style="color: darkred; font-family:fantasy">Polyphia - Crush</h3>
+        <audio controls muted loop preload="metadata" src="./Assignment10/audio/Polyphia - Crush.mp3"></audio><br>
+    </div>
+</body>
+</html>
