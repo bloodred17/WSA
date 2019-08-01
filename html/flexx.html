@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container__section-flex{
+            display: flex;
+            width: 100%;
+            background-color: blueviolet;
+            flex-direction: row;
+            height: 100vh;
+            flex-wrap: wrap;
+        }
+        .container__section-flex > * {
+            border: 1px solid black;
+            /* height: 200px; */
+        }
+
+        /* DESKTOP */
+        @media only screen and (min-width: 701px){
+            .head{
+                flex: 3 3 100%;
+                height: 10vh;
+            }
+            .box__aside{
+                flex: 1 1;
+                height: 80vh;
+            }
+            .box__article{
+                flex: 1 1;
+                height: 80vh;
+            }
+            .foot{
+                flex: 3 3 100%;
+                height: 10vh;
+            }
+        }
+        /* TABLET */
+        @media only screen and (max-width: 700px) and (min-width: 501px){
+            .head{
+                flex: 2 2 100%;
+                height: 10vh;
+            }
+            .aside1{
+                flex: 1 1 49%;
+                height: 40vh;
+            }
+            .box__article{
+                flex: 1 1 50%;
+                height: 40vh;
+            }
+            .aside2{
+                flex: 1 1 100%;
+                height: 40vh;
+            }
+
+            .foot{
+                flex: 2 2 100%;
+                height: 10vh;
+            }
+        }
+
+        @media only screen and (max-width: 500px){
+            .container__section-flex{
+                justify-content: center;
+            }
+            .head{
+                flex: 1 1 100%;
+                height: 10vh;
+            }
+            .aside1{
+                flex: 1 1 100%;
+                height: 26vh;
+            }
+            .box__article{
+                flex: 1 1 100%;
+                height: 26vh;
+            }
+            .aside2{
+                flex: 1 1 100%;
+                height: 26vh;
+            }
+
+            .foot{
+                flex: 1 1 100%;
+                height: 10vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="container__section-flex">
+        <header class="head">
+            <h1>Hello world</h1>
+        </header>
+        <aside class="box__aside aside1">
+            <p>This is Aside 1</p>
+        </aside>
+        
+        <article class="box__article">
+            <p>This is article</p>
+        </article>
+        
+        <aside class="box__aside aside2">
+            <p>This is Aside 2</p>
+            
+        </aside>
+        <footer class="foot">
+            <h3>This is footer</h3>
+        </footer>
+    </section>
+</body>
+</html>
+
+<!-- <div class="container__div">
+</div> -->

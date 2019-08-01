@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery-3.3.1.min.js"></script>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .questions__section{
+            border: 1px solid black;
+            display: flex;
+        }
+        .qna{
+            width: 100%;
+        }
+        .qna > p {
+            border: 1px solid black;
+        }
+        .answer{
+            display: none;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $(".qna").on("click", function(event){
+                $(".answer").slideUp();
+                $(event.currentTarget.lastElementChild).slideDown();
+                // console.log(event.currentTarget.lastElementChild);
+            });
+        });
+        </script>
+</head>
+<body>
+    <header>
+        <h1>jQuery <span>&gt;</span> Assignment - 1</h1>
+    </header>
+    <section class="questions__section">
+        <div class="qna">
+            <p class="question">Hello World! How are you?</p>
+            <p class="answer">I'm fine</p>
+        </div>
+        <div class="qna">
+            <p class="question">Hello World! How are you?</p>
+            <p class="answer">I'm fine</p>
+        </div>
+        <div class="qna">
+            <p class="question">Hello World! How are you?</p>
+            <p class="answer">I'm fine</p>
+        </div>
+        <div class="qna">
+            <p class="question">Hello World! How are you?</p>
+            <p class="answer">I'm fine</p>
+        </div>
+        <div class="qna">
+            <p class="question">Hello World! How are you?</p>
+            <p class="answer">I'm fine</p>
+        </div>
+        <div class="qna">
+            <p class="question">Hello World! How are you?</p>
+            <p class="answer">I'm fine</p>
+        </div>
+    </section>
+    </body>
+</html>

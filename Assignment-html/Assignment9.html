@@ -16,10 +16,17 @@ Institute: WSA
         body{
             margin: 0;
             padding: 0;
+            background: linear-gradient(135deg, rgb(68, 202, 201) 0%,rgb(252, 255, 114) 100%);
         }
         h1{
             text-align: center;
-            font-family: Georgia;
+            font-family: Open Sans;
+            /* background-color: blueviolet; */
+        }
+        h1 span{
+            background-color: blueviolet;
+            color: white;
+            padding: 0 10px;
         }
         header{
             margin-bottom: 100px;
@@ -27,21 +34,60 @@ Institute: WSA
         .div_head{
             margin: auto 20px;
         }
+        fieldset{
+            border: 2px dashed blueviolet;
+        }
+        fieldset > legend {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* border: 2px solid blueviolet; */
+        }
+        fieldset:hover legend{
+            background: linear-gradient(90deg, rgb(79, 30, 218) 0%,rgb(104, 100, 218) 33%,rgb(35, 219, 162) 100%);
+            color: white;
+            transition: all 0.4s;
+        }
         li{
             margin: 25px 10px;
+        }
+        .div_head{
+            font-family: Lato;
+
         }
         .div_head input {
             margin: 10px;
         }
         .options{
             float: left;
+            font-family: Roboto;
+            text-transform: capitalize;
         }
+        textarea{
+            border-radius: 5px;
+            padding: 7px;
+        }
+        textarea:focus{
+            border: 2px solid crimson;
+            padding: 10px;
+        }
+        input{
+            border-radius: 5px;
+            padding: 7px;
+        }
+        input:focus{
+            border: 2px solid crimson;
+            padding: 10px;
+        }
+        
         .marks{
-            /* float:right; */
+            float:right;
             /* position: relative; */
             /* top: -0px; */
             /* border: 1px solid gray; */
-            /* padding: 0px; */
+            border-radius: 20px;
+            color: white;
+            background: linear-gradient(135deg, rgb(32, 186, 230),rgb(110, 6, 173));
+            padding: 5px 10px;
+            font-weight: 700;
             text-align: right;
         }
         /* fieldset{
@@ -52,13 +98,13 @@ Institute: WSA
 </head>
 <body>
     <header>
-        <h1>Test</h1>
+        <h1><span>Test</span></h1>
         
         <div class="div_head" style="float: left">
             <label for="name">Name:</label>
             <input type="text" id="name"><br>
             <label for="date">Date:</label>
-            <input type="text" id="name"><br>
+            <input type="date" id="name"><br>
         </div>
         <div class="div_head" style="float: right">
             <label for="subject">Subject:</label>
@@ -81,6 +127,7 @@ Institute: WSA
                             <input type="checkbox" name="oop_languages" value="Java">Java<br>
                             <input type="checkbox" name="oop_languages" value="Python">Python<br>
                         </div>
+                        
                         <div class="marks">
                             <p style="display: inline">5</p>
                         </div>
@@ -90,108 +137,190 @@ Institute: WSA
                     <fieldset>
                         <legend>What do you mean by Object Oriented Language?</legend>
                         <textarea name="oop_defn" id="" cols="50" rows="3" placeholder="Write answer here"></textarea>
+                        <div class="marks">
+                            <p style="display: inline">5</p>
+                        </div>
                     </fieldset>
                 </li>
                 <li>
                     <fieldset>
-                        <legend>Which one of these is a object based language?</legend>
-                        <input type="radio" name="object_based" value="Java" >Java<br>
-                        <input type="radio" name="object_based" value="C">C<br>
-                        <input type="radio" name="object_based" value="Javascript">Javascript<br>
+                        <div class="options">
+
+                            <legend>Which one of these is a object based language?</legend>
+                            <input type="radio" name="object_based" value="Java" >Java<br>
+                            <input type="radio" name="object_based" value="C">C<br>
+                            <input type="radio" name="object_based" value="Javascript">Javascript<br>
+                        </div>
+                        
+                        <div class="marks">
+                            <p style="display: inline">5</p>
+                        </div>
                     </fieldset>
                 </li>
                 <li>
                     <fieldset>
                         <legend>Inside which HTML element do we put the JavaScript?</legend>
-                        <input type="radio" name="javascript_element" value="javascript">javascript<br>
-                        <input type="radio" name="javascript_element" value="script">script<br>
-                        <input type="radio" name="javascript_element" value="scripting">scripting<br>
-                        <input type="radio" name="javascript_element" value="js">js<br>
+                        <div class="options">
+
+                            <input type="radio" name="javascript_element" value="javascript">javascript<br>
+                            <input type="radio" name="javascript_element" value="script">script<br>
+                            <input type="radio" name="javascript_element" value="scripting">scripting<br>
+                            <input type="radio" name="javascript_element" value="js">js<br>
+                        </div>
+                            
+                        <div class="marks">
+                            <p style="display: inline">5</p>
+                        </div>
                     </fieldset>
                 </li>
                 <li>
                     <fieldset>
                         <legend>Javascript can be written -</legend>
-                        <input type="checkbox" name="js_written" value="directly on the Server Script">directly on the Server Script<br>
-                        <input type="checkbox" name="js_written" value="directly into JS file and included into HTML">directly into JS file and included into HTML<br>
-                        <input type="checkbox" name="js_written" value="None of these">None of these<br>
-                        <input type="checkbox" name="js_written" value="directly into HTML pages">directly into HTML pages<br>
+                        <div class="options">
+
+                            <input type="checkbox" name="js_written" value="directly on the Server Script">directly on the Server Script<br>
+                            <input type="checkbox" name="js_written" value="directly into JS file and included into HTML">directly into JS file and included into HTML<br>
+                            <input type="checkbox" name="js_written" value="None of these">None of these<br>
+                            <input type="checkbox" name="js_written" value="directly into HTML pages">directly into HTML pages<br>
+                        </div>
+                        
+                        <div class="marks">
+                            <p style="display: inline">5</p>
+                        </div>
                     </fieldset>
                 </li>
                 <li>
                     <fieldset>
                         <legend>JavaScript is designed for following purpose -</legend>
-                        <input type="checkbox" name="js_purpose" value="To Execute Query Related to DB on Server">To Execute Query Related to DB on Server<br>
-                        <input type="checkbox" name="js_purpose" value="To Perform Server Side Scripting Opertion">To Perform Server Side Scripting Opertion<br>
-                        <input type="checkbox" name="js_purpose" value="To Style HTML Pages">To Style HTML Pages<br>
-                        <input type="checkbox" name="js_purpose" value="To add interactivity to HTML Pages.">To add interactivity to HTML Pages.<br>
+                        <div class="options">
+
+                            <input type="checkbox" name="js_purpose" value="To Execute Query Related to DB on Server">To Execute Query Related to DB on Server<br>
+                            <input type="checkbox" name="js_purpose" value="To Perform Server Side Scripting Opertion">To Perform Server Side Scripting Opertion<br>
+                            <input type="checkbox" name="js_purpose" value="To Style HTML Pages">To Style HTML Pages<br>
+                            <input type="checkbox" name="js_purpose" value="To add interactivity to HTML Pages.">To add interactivity to HTML Pages.<br>
+                        </div>
+                        
+                        <div class="marks">
+                            <p style="display: inline">5</p>
+                        </div>
                     </fieldset>
                 </li>
                 <li>
                     <fieldset>
                         <legend>JavaScript Code is written inside file having extension __________.</legend>
-                        <input type="checkbox" name="js_extention" value="js">.js<br>
-                        <input type="checkbox" name="js_extention" value="jvs">.jvs<br>
-                        <input type="checkbox" name="js_extention" value="jsc">.jsc<br>
-                        <input type="checkbox" name="js_extention" value="javascript">.javascript<br>
+                        <div class="options">
+
+                            <input type="checkbox" name="js_extention" value="js">.js<br>
+                            <input type="checkbox" name="js_extention" value="jvs">.jvs<br>
+                            <input type="checkbox" name="js_extention" value="jsc">.jsc<br>
+                            <input type="checkbox" name="js_extention" value="javascript">.javascript<br>
+                        </div>
+                        
+                        <div class="marks">
+                            <p style="display: inline">5</p>
+                        </div>
                     </fieldset>
                 </li>
                 <li>
                     <fieldset>
                         <legend> JavaScript is also called as _____________.</legend>
-                        <input type="radio" name="js_alias" value="Server Side Scripting Language">Server Side Scripting Language<br>
-                        <input type="radio" name="js_alias" value="None of These">None of these<br>
-                        <input type="radio" name="js_alias" value="Browser Side Scripting Language">Browser Side Scripting Language<br>
-                        <input type="radio" name="js_alias" value="Client Side Scripting Language">Client Side Scripting Language<br>
+                        <div class="options">
+
+                            <input type="radio" name="js_alias" value="Server Side Scripting Language">Server Side Scripting Language<br>
+                            <input type="radio" name="js_alias" value="None of These">None of these<br>
+                            <input type="radio" name="js_alias" value="Browser Side Scripting Language">Browser Side Scripting Language<br>
+                            <input type="radio" name="js_alias" value="Client Side Scripting Language">Client Side Scripting Language<br>
+                        </div>
+                        
+                        <div class="marks">
+                            <p style="display: inline">5</p>
+                        </div>
                     </fieldset>
                 </li>
                 <li>
                     <fieldset>
                         <legend>Select all the correct option(s). State the correct place of JS Code inside HTML -</legend>
-                        <input type="checkbox" name="js_insert" value="Inside Single JavaScript File">Inside Single JavaScript File<br>
-                        <input type="checkbox" name="js_insert" value="Inside Head">Inside Head<br>
-                        <input type="checkbox" name="js_insert" value="Inside Body">Inside Body<br>
-                        <input type="checkbox" name="js_insert" value="All of these">All of these<br>
+                        <div class="options">
+
+                            <input type="checkbox" name="js_insert" value="Inside Single JavaScript File">Inside Single JavaScript File<br>
+                            <input type="checkbox" name="js_insert" value="Inside Head">Inside Head<br>
+                            <input type="checkbox" name="js_insert" value="Inside Body">Inside Body<br>
+                            <input type="checkbox" name="js_insert" value="All of these">All of these<br>
+                        </div>
+                        
+                        <div class="marks">
+                            <p style="display: inline">5</p>
+                        </div>
                     </fieldset>
                 </li>
                 <li>
                     <fieldset>
                         <legend>Code included inside head section is loaded before loading page.</legend>
-                        <input type="radio" name="js_load" value="true">True<br>
-                        <input type="radio" name="js_load" value="flase">False<br>
+                        <div class="options">
+
+                            <input type="radio" name="js_load" value="true">True<br>
+                            <input type="radio" name="js_load" value="flase">False<br>
+                        </div>
+                        
+                        <div class="marks">
+                            <p style="display: inline">5</p>
+                        </div>
                     </fieldset>
                 </li>
                 <li>
                     <fieldset>
                         <legend>What do you mean by Object Based language:</legend>
                         <textarea name="object_based" cols="50" rows=3 placeholder="Write answer here"></textarea>
+                        
+                        <div class="marks">
+                            <p style="display: inline">5</p>
+                        </div>
                     </fieldset>
                 </li>
                 <li>
                     <fieldset>
                         <legend>What do you mean by Scripting language:</legend>
                         <textarea name="scripting_language" cols="50" rows="3" placeholder="Write answer here"></textarea>
+                        
+                        <div class="marks">
+                            <p style="display: inline">5</p>
+                        </div>
                     </fieldset>
                 </li>
                 <li>
                     <fieldset>
                         <legend>Which was the first browser to support JavaScript ?</legend>
-                        <input type="radio" name="js_support_first" value="Google Chrome">Google Chrome<br>
-                        <input type="radio" name="js_support_first" value="Mozilla Firefox">Mozilla Firefox<br>
-                        <input type="radio" name="js_support_first" value="Internet Explorer">Internet Explorer<br>
-                        <input type="radio" name="js_support_first" value="Netscape Navigator">Netscape Navigator<br>
+                        <div class="options">
+
+                            <input type="radio" name="js_support_first" value="Google Chrome">Google Chrome<br>
+                            <input type="radio" name="js_support_first" value="Mozilla Firefox">Mozilla Firefox<br>
+                            <input type="radio" name="js_support_first" value="Internet Explorer">Internet Explorer<br>
+                            <input type="radio" name="js_support_first" value="Netscape Navigator">Netscape Navigator<br>
+                        </div>
+                        
+                        <div class="marks">
+                            <p style="display: inline">5</p>
+                        </div>
                     </fieldset>
                 </li>
                 <li>
                     <fieldset>
                         <legend>How to write multiline comments in Javascript?</legend>
-                        <textarea name="multiline_comments" cols="50" rows="3"></textarea>
+                        <textarea name="multiline_comments" cols="50" rows="3"  placeholder="Write answer here..."></textarea>
+                        
+                        <div class="marks">
+                            <p style="display: inline">5</p>
+                        </div>
                     </fieldset>
                 </li>
                 <li>
                     <fieldset>
                         <legend>What is the latest Javascript version?</legend>
-                        <textarea name="js_version" cols="50" rows="3"></textarea>
+                        <textarea name="js_version" cols="50" rows="3" placeholder="Write answer here..."></textarea>
+                        
+                        <div class="marks">
+                            <p style="display: inline">5</p>
+                        </div>
                     </fieldset>
                 </li>
             </ol>
